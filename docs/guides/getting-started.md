@@ -1,19 +1,19 @@
-# Getting Started
+# Primeiros Passos
 
-> This guide will be populated when the project stack is configured via `@hive-initializer`.
+> Este guia será preenchido quando o stack do projeto for configurado via `@hive-initializer`.
 
-## Prerequisites
+## Pré-requisitos
 
-{List required tools, runtimes, and dependencies.}
+{Liste as ferramentas, runtimes e dependências necessários.}
 
-## Installation
+## Instalação
 
-{Step-by-step installation instructions.}
+{Instruções de instalação passo a passo.}
 
-## Development
+## Desenvolvimento
 
-{How to run the project in development mode.}
+{Como executar o projeto em modo de desenvolvimento.}
 
-## Testing
+## Testes
 
-{How to run tests.}
+{Como executar os testes.}

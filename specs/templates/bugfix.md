@@ -1,61 +1,61 @@
-# Bugfix: {Title}
+# Bugfix: {Título}
 
-> **Status**: Draft
-> **Date**: {YYYY-MM-DD}
-> **Reported by**: {source}
-> **Severity**: {critical | high | medium | low}
-> **Assigned to**: {`@engineer-backend` | `@engineer-frontend`}
+> **Status**: Rascunho
+> **Data**: {YYYY-MM-DD}
+> **Reportado por**: {fonte}
+> **Severidade**: {critical | high | medium | low}
+> **Atribuído a**: {`@engineer-backend` | `@engineer-frontend`}
 
-## Bug Report
+## Report do Bug
 
-### Description
-{Clear description of the bug}
+### Descrição
+{Descrição clara do bug}
 
-### Environment
-- **OS/Browser**: {where it occurs}
-- **Version**: {application version}
-- **Environment**: {production | staging | development}
+### Ambiente
+- **SO/Browser**: {onde ocorre}
+- **Versão**: {versão da aplicação}
+- **Ambiente**: {production | staging | development}
 
-## Symptoms
+## Sintomas
 
-{Observable behavior and error messages. Include stack traces if available.}
+{Comportamento observável e mensagens de erro. Inclua stack traces se disponíveis.}
 
-## Reproduction Steps
+## Passos de Reprodução
 
-1. {Step 1}
-2. {Step 2}
-3. **Expected**: {what should happen}
-4. **Actual**: {what actually happens}
+1. {Passo 1}
+2. {Passo 2}
+3. **Esperado**: {o que deveria acontecer}
+4. **Atual**: {o que realmente acontece}
 
-## Root Cause Analysis
+## Análise de Causa Raiz
 
-{Technical explanation of why the bug occurs, with file and line references}
+{Explicação técnica de por que o bug ocorre, com referências de arquivo e linha}
 
-## Impact Assessment
+## Avaliação de Impacto
 
-- **Affected areas**: {list of affected features/modules}
-- **Affected users**: {scope of impact}
-- **Data risk**: {any data corruption or loss risk}
-- **Workaround**: {temporary workaround if available}
+- **Áreas afetadas**: {lista de features/módulos afetados}
+- **Usuários afetados**: {escopo do impacto}
+- **Risco de dados**: {qualquer risco de corrupção ou perda de dados}
+- **Contorno temporário**: {workaround temporário, se disponível}
 
-## Proposed Fix
+## Correção Proposta
 
-{Detailed technical approach to fix the issue}
+{Abordagem técnica detalhada para corrigir o problema}
 
-### Files to Modify
+### Arquivos para Modificar
 
-| File | Change Description |
-|------|--------------------|
-| `{path}` | {what to change} |
+| Arquivo | Descrição da Mudança |
+|---------|---------------------|
+| `{caminho}` | {o que mudar} |
 
-## Verification
+## Verificação
 
-### Fix Verification
-- [ ] {How to verify the fix works}
+### Verificação da Correção
+- [ ] {Como verificar que a correção funciona}
 
-### Regression Tests
-- [ ] {Test to add to prevent recurrence}
+### Testes de Regressão
+- [ ] {Teste a adicionar para prevenir recorrência}
 
-## References
+## Referências
 
-- {Links to error logs, monitoring, user reports}
+- {Links para logs de erro, monitoramento, reports de usuários}

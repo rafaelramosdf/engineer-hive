@@ -1,42 +1,42 @@
-# Contributing Guide
+# Guia de Contribuição
 
-## Workflow
+## Fluxo de Trabalho
 
-This project uses the **Engineer Hive** framework for AI-first development. All work follows the spec-driven workflow:
+Este projeto utiliza o framework **Engineer Hive** para desenvolvimento AI-first. Todo trabalho segue o fluxo orientado a specs:
 
-1. **Write a spec** — Use the templates in `specs/templates/`
-2. **Invoke an agent** — Use the appropriate agent for your task
-3. **Implement** — Agent follows the spec and project standards
-4. **Document** — `@doc-manager` updates documentation
-5. **Commit** — Follow conventional commits
+1. **Escreva uma spec** — Use os templates em `specs/templates/`
+2. **Invoque um agente** — Use o agente apropriado para sua tarefa
+3. **Implemente** — O agente segue a spec e os padrões do projeto
+4. **Documente** — `@doc-manager` atualiza a documentação
+5. **Commit** — Siga as convenções de conventional commits
 
-## Writing Specifications
+## Escrevendo Especificações
 
-See `specs/README.md` for detailed instructions on writing specs.
+Consulte `specs/README.md` para instruções detalhadas sobre como escrever specs.
 
-### Quick Prompts
+### Prompts Rápidos
 
-| Action | Prompt |
-|--------|--------|
-| New feature | `/new-feature` |
-| Technical task | `/new-task` |
-| Bug fix | `/bugfix` |
-| Critical fix | `/hotfix` |
-| Implement spec | `/implement-spec` |
+| Ação | Prompt |
+|------|--------|
+| Nova feature | `/new-feature` |
+| Task técnica | `/new-task` |
+| Correção de bug | `/bugfix` |
+| Correção crítica | `/hotfix` |
+| Implementar spec | `/implement-spec` |
 
-## Code Standards
+## Padrões de Código
 
-- Follow the coding standards defined in `.github/instructions/coding-standards.instructions.md`
-- Follow the project's stack-specific rules in `.github/instructions/stack*.instructions.md`
+- Siga os padrões de código definidos em `.github/instructions/coding-standards.instructions.md`
+- Siga as regras específicas do stack do projeto em `.github/instructions/stack*.instructions.md`
 
-## Git Conventions
+## Convenções Git
 
-- **Branch naming**: `feature/`, `fix/`, `chore/`, `hotfix/`
-- **Commit format**: Conventional Commits — `type(scope): description`
-- **Types**: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
+- **Nomenclatura de branch**: `feature/`, `fix/`, `chore/`, `hotfix/`
+- **Formato de commit**: Conventional Commits — `tipo(escopo): descrição`
+- **Tipos**: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 
-## Getting Help
+## Obtendo Ajuda
 
-- **Framework questions**: Tag `@hive-initializer`
-- **Architecture questions**: Tag `@architect`
-- **Product questions**: Tag `@product-manager`
+- **Dúvidas sobre o framework**: Use `@hive-initializer`
+- **Dúvidas de arquitetura**: Use `@architect`
+- **Dúvidas de produto**: Use `@product-manager`

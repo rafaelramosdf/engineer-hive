@@ -1,58 +1,58 @@
-# Hotfix: {Title}
+# Hotfix: {Título}
 
-> **Status**: URGENT
-> **Date**: {YYYY-MM-DD}
-> **Reported by**: {source}
-> **Severity**: Critical
-> **Assigned to**: {`@engineer-backend` | `@engineer-frontend`}
+> **Status**: URGENTE
+> **Data**: {YYYY-MM-DD}
+> **Reportado por**: {fonte}
+> **Severidade**: Crítica
+> **Atribuído a**: {`@engineer-backend` | `@engineer-frontend`}
 
-## Critical Issue
+## Problema Crítico
 
-{Brief, clear description of the production issue}
+{Descrição breve e clara do problema de produção}
 
-## Impact
+## Impacto
 
-- **Users affected**: {scope}
-- **Revenue impact**: {if applicable}
-- **Data risk**: {any data corruption or loss}
-- **Time critical**: {SLA or deadline}
+- **Usuários afetados**: {escopo}
+- **Impacto financeiro**: {se aplicável}
+- **Risco de dados**: {qualquer corrupção ou perda de dados}
+- **Prazo crítico**: {SLA ou deadline}
 
-## Symptoms
+## Sintomas
 
-{What is happening in production? Include error messages, metrics, alerts.}
+{O que está acontecendo em produção? Inclua mensagens de erro, métricas, alertas.}
 
-## Reproduction
+## Reprodução
 
-1. {Fastest way to reproduce}
-2. **Expected**: {correct behavior}
-3. **Actual**: {broken behavior}
+1. {Forma mais rápida de reproduzir}
+2. **Esperado**: {comportamento correto}
+3. **Atual**: {comportamento com falha}
 
-## Root Cause
+## Causa Raiz
 
-{Quick root cause analysis — focus on the most likely cause}
+{Análise rápida de causa raiz — foque na causa mais provável}
 
-## Proposed Fix
+## Correção Proposta
 
-{Minimal, safe fix to resolve the issue. Prefer the smallest change that fixes the problem.}
+{Correção mínima e segura para resolver o problema. Prefira a menor mudança que resolve o problema.}
 
-### Files to Modify
+### Arquivos para Modificar
 
-| File | Change |
-|------|--------|
-| `{path}` | {minimal change description} |
+| Arquivo | Mudança |
+|---------|--------|
+| `{caminho}` | {descrição da mudança mínima} |
 
-## Rollback Plan
+## Plano de Rollback
 
-{How to roll back if the fix causes additional issues}
+{Como reverter se a correção causar problemas adicionais}
 
-1. {Rollback step 1}
-2. {Rollback step 2}
+1. {Passo de rollback 1}
+2. {Passo de rollback 2}
 
-## Verification
+## Verificação
 
-- [ ] {How to verify the fix resolves the issue in production}
-- [ ] {Monitoring check to confirm stability}
+- [ ] {Como verificar que a correção resolve o problema em produção}
+- [ ] {Verificação de monitoramento para confirmar estabilidade}
 
-## Follow-up
+## Ações de Acompanhamento
 
-{Any non-urgent follow-up work needed after the hotfix is deployed. Create a separate task spec for these.}
+{Trabalho de acompanhamento não urgente necessário após o deploy do hotfix. Crie uma spec de task separada para esses itens.}

@@ -1,15 +1,15 @@
-# Architecture Overview
+# Visão Geral da Arquitetura
 
-> This document will be populated when the project stack is configured via `@hive-initializer`.
+> Este documento será preenchido quando o stack do projeto for configurado via `@hive-initializer`.
 
-## System Architecture
+## Arquitetura do Sistema
 
-{Describe the overall system architecture, components, and how they interact.}
+{Descreva a arquitetura geral do sistema, os componentes e como eles interagem.}
 
-## Technology Stack
+## Tech Stack
 
-{List the technologies, frameworks, and tools used in the project.}
+{Liste as tecnologias, frameworks e ferramentas utilizadas no projeto.}
 
-## Key Decisions
+## Decisões Chave
 
-Architecture Decision Records are stored in `docs/architecture/decisions/`.
+Os Architecture Decision Records (ADRs) estão armazenados em `docs/architecture/decisions/`.

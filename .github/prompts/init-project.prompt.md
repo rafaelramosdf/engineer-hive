@@ -1,17 +1,19 @@
 ---
-description: "Initialize or reconfigure the Engineer Hive framework for a project"
+description: "Inicializar ou reconfigurar o framework Engineer Hive para um projeto"
 agent: "hive-initializer"
-argument-hint: "New project or existing project to configure"
+argument-hint: "Novo projeto ou projeto existente a configurar"
 ---
 
-Run the Hive Initializer to set up or reconfigure the Engineer Hive framework.
+Execute o Hive Initializer para configurar ou reconfigurar o framework Engineer Hive.
 
-For a **new project**: Interview the engineer about the project's stack, architecture, and conventions, then configure all framework components accordingly.
+Para um **novo projeto**: Entreviste o engenheiro sobre o stack, arquitetura e convenções do projeto, incluindo o **idioma preferido** (padrão: pt-br), e em seguida configure todos os componentes do framework de acordo.
 
-For an **existing project**: Analyze the current codebase to detect stack, patterns, and conventions, then configure the framework to match.
+Para um **projeto existente**: Analise a base de código atual para detectar stack, padrões e convenções, e configure o framework para correspondêr.
 
-After setup:
-1. Generate stack-specific instruction files in `.github/instructions/`
-2. Verify all framework components are in place
-3. Run a health check on the framework structure
-4. Provide a summary and next steps
+Para **reconfigurar o idioma**: Se o usuário solicitar mudança de idioma, atualize `.github/instructions/language.instructions.md` com o novo idioma padrão.
+
+Após o setup:
+1. Gere arquivos de instruções específicos do stack em `.github/instructions/`
+2. Verifique se todos os componentes do framework estão no lugar
+3. Execute um health check na estrutura do framework
+4. Fornecer um resumo e próximos passos

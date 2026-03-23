@@ -1,16 +1,16 @@
 ---
-description: "Implement a feature or task from an existing specification"
+description: "Implementar uma feature ou task a partir de uma especificação existente"
 agent: "agent"
-argument-hint: "Path to the spec file to implement (e.g., specs/features/2026-03-22-user-auth.md)"
+argument-hint: "Caminho para o arquivo de spec a implementar (ex.: specs/features/2026-03-22-autenticacao.md)"
 ---
 
-Implement a feature or task from a specification file.
+Implemente uma feature ou task a partir de um arquivo de especificação.
 
-Follow these steps:
-1. Read and understand the spec file provided by the user
-2. Identify the target agent from the spec (backend, frontend, or both)
-3. Review the project's architecture and coding standards
-4. Implement the changes following the spec requirements
-5. Write tests for all new functionality
-6. Verify all acceptance criteria are met
-7. Provide an implementation summary for `@doc-manager`
+Siga estes passos:
+1. Leia e entenda o arquivo de spec fornecido pelo usuário
+2. Identifique o agente-alvo na spec (backend, frontend ou ambos)
+3. Revise a arquitetura e os padrões de código do projeto
+4. Implemente as mudanças seguindo os requisitos da spec
+5. Escreva testes para todas as novas funcionalidades
+6. Verifique se todos os critérios de aceitação foram atendidos
+7. Fornecer um resumo de implementação para o `@doc-manager`

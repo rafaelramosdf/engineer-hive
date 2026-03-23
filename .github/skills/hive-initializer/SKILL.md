@@ -1,48 +1,56 @@
 ---
 name: hive-initializer
-description: "Setup and configure the Engineer Hive framework for any software project. Use when initializing a new project, onboarding an existing project, reconfiguring stack settings, or running framework health checks."
+description: "Setup e configuração do framework Engineer Hive para qualquer projeto de software. Use quando inicializar um novo projeto, integrar um projeto existente, reconfigurar o stack ou o idioma, ou executar health checks do framework."
 ---
 
-# Hive Initializer Skill
+# Skill: Hive Initializer
 
-## When to Use
+## Quando Usar
 
-- Setting up Engineer Hive for the first time in a project
-- Onboarding an existing project into the framework
-- Reconfiguring the project stack or architecture
-- Running a framework health check
-- Troubleshooting framework configuration issues
+- Configurando o Engineer Hive pela primeira vez em um projeto
+- Integrando um projeto existente ao framework
+- Reconfigurando o stack, arquitetura ou **idioma padrão** do projeto
+- Executando um health check do framework
+- Solucionando problemas de configuração do framework
 
-## Procedure
+## Procedimento
 
-### New Project Setup
+### Setup de Novo Projeto
 
-1. Interview the engineer using the [setup checklist](./references/setup-checklist.md)
-2. Generate stack-specific instruction files
-3. Configure agent references to match the project stack
-4. Initialize the `specs/` and `docs/` directories
-5. Run the health check from [framework overview](./references/framework-overview.md)
+1. Entrevistar o engenheiro usando o [checklist de setup](./references/setup-checklist.md)
+2. Gerar arquivos de instrução específicos do stack
+3. Configurar o idioma padrão em `.github/instructions/language.instructions.md`
+4. Configurar referências dos agentes para corresponder ao stack do projeto
+5. Inicializar os diretórios `specs/` e `docs/`
+6. Executar o health check da [visão geral do framework](./references/framework-overview.md)
 
-### Existing Project Onboarding
+### Integração de Projeto Existente
 
-1. Scan for stack indicators (package files, config files, etc.)
-2. Detect architecture patterns from code structure
-3. Extract coding conventions from existing code
-4. Generate instruction files based on findings
-5. Verify framework structure integrity
+1. Escanear por indicadores de stack (arquivos de pacote, arquivos de config, etc.)
+2. Detectar padrões de arquitetura a partir da estrutura do código
+3. Extrair convenções de código do código existente
+4. Gerar arquivos de instrução baseados nos achados
+5. Verificar integridade da estrutura do framework
+
+### Reconfigurar Idioma do Projeto
+
+1. Confirmar o idioma desejado com o usuário
+2. Atualizar `.github/instructions/language.instructions.md` com o novo idioma padrão
+3. Confirmar a mudança para o usuário
 
 ### Health Check
 
-Verify all components exist and are properly configured:
+Verificar se todos os componentes existem e estão corretamente configurados:
 - `.github/copilot-instructions.md` — Bootstrap routing
-- `.github/agents/` — All 8 specialist agents
-- `.github/instructions/` — Stack and coding guidelines
-- `.github/prompts/` — Workflow templates
-- `.github/skills/` — Complex workflow assets
-- `specs/` — Spec directories and templates
-- `docs/` — Project documentation
+- `.github/agents/` — Todos os 8 agentes especialistas
+- `.github/instructions/` — Diretrizes de stack, código e idioma
+- `.github/instructions/language.instructions.md` — Configuração de idioma
+- `.github/prompts/` — Templates de fluxo de trabalho
+- `.github/skills/` — Assets de fluxos complexos
+- `specs/` — Diretórios e templates de spec
+- `docs/` — Documentação do projeto
 
-## References
+## Referências
 
-- [Framework Overview](./references/framework-overview.md)
-- [Setup Checklist](./references/setup-checklist.md)
+- [Visão Geral do Framework](./references/framework-overview.md)
+- [Checklist de Setup](./references/setup-checklist.md)

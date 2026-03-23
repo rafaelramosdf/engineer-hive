@@ -1,61 +1,61 @@
-# Architecture Decision Record Template
+# Template de Architecture Decision Record
 
-Use this template when documenting architecture decisions. Save ADRs to `docs/architecture/decisions/`.
+Use este template ao documentar decisões de arquitetura. Salve ADRs em `docs/architecture/decisions/`.
 
-## File Naming
+## Nomenclatura de Arquivos
 
-`ADR-{number}-{short-slug}.md`
+`ADR-{número}-{short-slug}.md`
 
-Examples:
-- `ADR-001-use-postgresql.md`
-- `ADR-002-adopt-clean-architecture.md`
-- `ADR-003-implement-cqrs.md`
+Exemplos:
+- `ADR-001-usar-postgresql.md`
+- `ADR-002-adotar-clean-architecture.md`
+- `ADR-003-implementar-cqrs.md`
 
 ## Template
 
 ```markdown
-# ADR-{number}: {Title}
+# ADR-{número}: {Título}
 
-**Date**: {YYYY-MM-DD}
-**Status**: {Proposed | Accepted | Deprecated | Superseded by ADR-XXX}
-**Deciders**: {who made the decision}
+**Data**: {YYYY-MM-DD}
+**Status**: {Proposto | Aceito | Depreciado | Substituído por ADR-XXX}
+**Decisores**: {quem tomou a decisão}
 
-## Context
+## Contexto
 
-{What is the issue or situation that motivates this decision? Include relevant technical and business context.}
+{Qual é o problema ou situação que motiva esta decisão? Inclua contexto técnico e de negócio relevante.}
 
-## Decision
+## Decisão
 
-{What is the decision being made? Be specific about the chosen approach.}
+{Qual é a decisão sendo tomada? Seja específico sobre a abordagem escolhida.}
 
-## Rationale
+## Justificativa
 
-{Why was this approach chosen? What are the key factors that influenced the decision?}
+{Por que essa abordagem foi escolhida? Quais são os fatores-chave que influenciaram a decisão?}
 
-## Consequences
+## Consequências
 
-### Positive
-- {Positive outcome 1}
-- {Positive outcome 2}
+### Positivas
+- {Resultado positivo 1}
+- {Resultado positivo 2}
 
-### Negative
-- {Trade-off or downside 1}
-- {Trade-off or downside 2}
+### Negativas
+- {Trade-off ou desvantagem 1}
+- {Trade-off ou desvantagem 2}
 
-### Neutral
-- {Neutral consequence that the team should be aware of}
+### Neutras
+- {Consequência neutra que o time deve conhecer}
 
-## Alternatives Considered
+## Alternativas Consideradas
 
-### {Alternative 1}
-- **Description**: {brief description}
-- **Why rejected**: {reason}
+### {Alternativa 1}
+- **Descrição**: {breve descrição}
+- **Por que rejeitada**: {motivo}
 
-### {Alternative 2}
-- **Description**: {brief description}
-- **Why rejected**: {reason}
+### {Alternativa 2}
+- **Descrição**: {breve descrição}
+- **Por que rejeitada**: {motivo}
 
-## References
+## Referências
 
-- {Link to relevant documentation, RFC, or discussion}
+- {Link para documentação relevante, RFC ou discussão}
 ```

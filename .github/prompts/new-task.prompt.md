@@ -1,14 +1,14 @@
 ---
-description: "Create a new task specification for technical improvements or refactoring"
+description: "Criar uma nova especificação de task para melhorias técnicas ou refatoração"
 agent: "product-manager"
-argument-hint: "Describe the technical task"
+argument-hint: "Descreva a task técnica"
 ---
 
-Create a new task specification using the template at [task template](../../../specs/templates/task.md).
+Crie uma nova especificação de task usando o template em [task template](../../../specs/templates/task.md).
 
-Follow these steps:
-1. Understand the task request from the user's input
-2. Analyze the current codebase for context and affected areas
-3. Write a detailed task spec with requirements and acceptance criteria
-4. Save the spec to `specs/tasks/` using the naming convention `{YYYY-MM-DD}-{short-slug}.md`
-5. Recommend which agent should execute this task
+Siga estes passos:
+1. Entenda a solicitação de task a partir do input do usuário
+2. Analise a base de código atual para contexto e áreas afetadas
+3. Escreva uma spec de task detalhada com requisitos e critérios de aceitação
+4. Salve a spec em `specs/tasks/` usando a convenção de nome `{YYYY-MM-DD}-{short-slug}.md`
+5. Recomende qual agente deve executar esta task

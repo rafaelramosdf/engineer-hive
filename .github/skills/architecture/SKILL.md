@@ -1,43 +1,43 @@
 ---
 name: architecture
-description: "Architecture knowledge base with design patterns, system designs, and architectural patterns. Use when making architecture decisions, evaluating design approaches, or reviewing system structure."
+description: "Base de conhecimento de arquitetura com padrões de design, system design e padrões arquiteturais. Use quando tomar decisões de arquitetura, avaliar abordagens de design ou revisar a estrutura do sistema."
 ---
 
-# Architecture Skill
+# Skill: Arquitetura
 
-## When to Use
+## Quando Usar
 
-- Making architecture decisions for new features or systems
-- Evaluating trade-offs between architectural approaches
-- Reviewing existing architecture for improvements
-- Documenting architecture decisions (ADRs)
-- Choosing design patterns for implementation
+- Tomando decisões de arquitetura para novas features ou sistemas
+- Avaliando trade-offs entre abordagens arquiteturais
+- Revisando arquitetura existente para melhorias
+- Documentando decisões de arquitetura (ADRs)
+- Escolhendo padrões de design para implementação
 
-## Knowledge Base
+## Base de Conhecimento
 
-This skill provides reference documentation for common architectural patterns and design decisions.
+Esta skill fornece documentação de referência para padrões arquiteturais comuns e decisões de design.
 
-### References
+### Referências
 
-- [Design Patterns](./references/design-patterns.md) — GoF and modern patterns
-- [Software Architectures](./references/software-architectures.md) — Application architecture patterns
-- [System Design](./references/system-design.md) — Distributed system patterns
-- [ADR Template](./references/adr-template.md) — Architecture Decision Record format
+- [Padrões de Design](./references/design-patterns.md) — Padrões GoF e modernos
+- [Arquiteturas de Software](./references/software-architectures.md) — Padrões de arquitetura de aplicação
+- [System Design](./references/system-design.md) — Padrões de sistemas distribuídos
+- [Template ADR](./references/adr-template.md) — Formato de Architecture Decision Record
 
-## Procedure
+## Procedimento
 
-### Making an Architecture Decision
+### Tomando uma Decisão de Arquitetura
 
-1. **Understand the requirement** — What problem are we solving?
-2. **Review current architecture** — Check `docs/architecture/` for existing decisions
-3. **Evaluate options** — Consult relevant reference docs for patterns
-4. **Assess trade-offs** — Consider complexity, scalability, maintainability, team expertise
-5. **Document the decision** — Create an ADR using the [template](./references/adr-template.md)
-6. **Update instructions** — If new patterns are introduced, update `.github/instructions/`
+1. **Entender o requisito** — Qual problema estamos resolvendo?
+2. **Revisar a arquitetura atual** — Verificar `docs/architecture/` para decisões existentes
+3. **Avaliar opções** — Consultar docs de referência relevantes para padrões
+4. **Avaliar trade-offs** — Considerar complexidade, escalabilidade, manutenibilidade, expertise do time
+5. **Documentar a decisão** — Criar um ADR usando o [template](./references/adr-template.md)
+6. **Atualizar instruções** — Se novos padrões forem introduzidos, atualizar `.github/instructions/`
 
-### Architecture Review
+### Revisão de Arquitetura
 
-1. **Analyze the codebase** — Identify current patterns and structure
-2. **Check for anti-patterns** — Look for violations of chosen architecture
-3. **Propose improvements** — Prioritize by impact and effort
-4. **Write recommendations** — Structured report with specific action items
+1. **Analisar a base de código** — Identificar padrões e estrutura atuais
+2. **Verificar anti-padrões** — Procurar violações da arquitetura escolhida
+3. **Propor melhorias** — Priorizar por impacto e esforço
+4. **Escrever recomendações** — Relatório estruturado com itens de ação específicos

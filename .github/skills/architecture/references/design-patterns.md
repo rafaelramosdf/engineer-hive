@@ -1,68 +1,68 @@
-# Design Patterns Reference
+# Referência de Padrões de Design
 
-## Creational Patterns
+## Padrões Criacionais
 
 ### Factory Method
-- **When**: Object creation logic should be centralized or varied by context
-- **Structure**: Creator defines interface; concrete creators implement specific creation
-- **Example**: Different payment processors created by a factory based on payment type
+- **Quando usar**: Lógica de criação de objetos deve ser centralizada ou variada por contexto
+- **Estrutura**: Criador define interface; criadores concretos implementam a criação específica
+- **Exemplo**: Diferentes processadores de pagamento criados por uma factory baseada no tipo de pagamento
 
 ### Builder
-- **When**: Complex object construction with many optional parameters
-- **Structure**: Step-by-step construction with a director orchestrating the process
-- **Example**: Building query objects, configuration objects, or complex DTOs
+- **Quando usar**: Construção de objetos complexos com muitos parâmetros opcionais
+- **Estrutura**: Construção passo a passo com um director orquestrando o processo
+- **Exemplo**: Construir objetos de query, objetos de configuração ou DTOs complexos
 
 ### Singleton
-- **When**: Exactly one instance needed globally (use sparingly)
-- **Structure**: Private constructor, static instance method
-- **Caution**: Often an anti-pattern — prefer dependency injection
+- **Quando usar**: Exatamente uma instância necessária globalmente (usar com parcimônia)
+- **Estrutura**: Construtor privado, método estático de instância
+- **Atenção**: Frequentemente um anti-padrão — prerfira injetão de dependência
 
-## Structural Patterns
+## Padrões Estruturais
 
 ### Adapter
-- **When**: Integrate incompatible interfaces (e.g., third-party libraries)
-- **Structure**: Wrapper that translates one interface to another
+- **Quando usar**: Integrar interfaces incompatíveis (ex.: bibliotecas de terceiros)
+- **Estrutura**: Wrapper que traduz uma interface para outra
 
 ### Facade
-- **When**: Simplify a complex subsystem with a unified interface
-- **Structure**: Single entry point that delegates to internal components
+- **Quando usar**: Simplificar um subsistema complexo com uma interface unificada
+- **Estrutura**: Ponto de entrada único que delega para componentes internos
 
 ### Decorator
-- **When**: Add behavior to objects dynamically without modifying their class
-- **Structure**: Wrapper that extends functionality while maintaining the interface
+- **Quando usar**: Adicionar comportamento a objetos dinamicamente sem modificar sua classe
+- **Estrutura**: Wrapper que estende funcionalidade mantendo a interface
 
 ### Repository
-- **When**: Abstract data access behind a collection-like interface
-- **Structure**: Interface defining data operations; implementation handles persistence
+- **Quando usar**: Abstrair acesso a dados atrás de uma interface similar a coleção
+- **Estrutura**: Interface que define operações de dados; implementação gerencia persistência
 
-## Behavioral Patterns
+## Padrões Comportamentais
 
 ### Strategy
-- **When**: Multiple algorithms/approaches that should be interchangeable
-- **Structure**: Interface for the strategy; concrete implementations; context selects strategy
+- **Quando usar**: Múltiplos algoritmos/abordagens que devem ser intercambiáveis
+- **Estrutura**: Interface para a estratégia; implementações concretas; contexto seleciona a estratégia
 
 ### Observer/Event
-- **When**: Objects need to react to state changes without tight coupling
-- **Structure**: Publisher emits events; subscribers react independently
+- **Quando usar**: Objetos precisam reagir a mudanças de estado sem acoplamento forte
+- **Estrutura**: Publisher emite eventos; subscribers reagem de forma independente
 
 ### Command
-- **When**: Encapsulate operations as objects (undo, queue, log)
-- **Structure**: Command interface with execute/undo; invoker triggers commands
+- **Quando usar**: Encapsular operações como objetos (undo, fila, log)
+- **Estrutura**: Interface Command com execute/undo; invoker dispara comandos
 
 ### Middleware/Pipeline
-- **When**: Process requests through a chain of handlers
-- **Structure**: Each handler processes and passes to the next; order matters
+- **Quando usar**: Processar requisições através de uma cadeia de handlers
+- **Estrutura**: Cada handler processa e passa para o próximo; a ordem importa
 
-## Modern Patterns
+## Padrões Modernos
 
-### Dependency Injection
-- **When**: Always — it's a fundamental principle for testable, decoupled code
-- **Structure**: Dependencies provided externally (constructor, method, or container)
+### Injetão de Dependência (Dependency Injection)
+- **Quando usar**: Sempre — é um princípio fundamental para código testável e desacoplado
+- **Estrutura**: Dependências fornecidas externamente (construtor, método ou container)
 
 ### Module Pattern
-- **When**: Encapsulate related functionality with clear public API
-- **Structure**: Private internals, exported public interface
+- **Quando usar**: Encapsular funcionalidade relacionada com API pública clara
+- **Estrutura**: Internos privados, interface pública exportada
 
 ### Result/Either
-- **When**: Operations that can fail — avoid throwing exceptions for expected failures
-- **Structure**: Return type wrapping success value or error with type safety
+- **Quando usar**: Operações que podem falhar — evitar lançar exceções para falhas esperadas
+- **Estrutura**: Tipo de retorno encapsulando valor de sucesso ou erro com type safety

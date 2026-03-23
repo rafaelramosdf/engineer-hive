@@ -1,14 +1,14 @@
 ---
-description: "Create a new feature specification following Engineer Hive standards"
+description: "Criar uma nova especificação de feature seguindo os padrões do Engineer Hive"
 agent: "product-manager"
-argument-hint: "Describe the feature you want to specify"
+argument-hint: "Descreva a feature que você quer especificar"
 ---
 
-Create a new feature specification using the template at [feature template](../../../specs/templates/feature.md).
+Crie uma nova especificação de feature usando o template em [feature template](../../../specs/templates/feature.md).
 
-Follow these steps:
-1. Understand the feature request from the user's input
-2. Analyze the current codebase to understand context and existing patterns
-3. Write a comprehensive feature spec with all required sections
-4. Save the spec to `specs/features/` using the naming convention `{YYYY-MM-DD}-{short-slug}.md`
-5. Recommend which agent should implement this feature
+Siga estes passos:
+1. Entenda a solicitação de feature a partir do input do usuário
+2. Analise a base de código atual para entender contexto e padrões existentes
+3. Escreva uma spec de feature completa com todas as seções obrigatórias
+4. Salve a spec em `specs/features/` usando a convenção de nome `{YYYY-MM-DD}-{short-slug}.md`
+5. Recomende qual agente deve implementar esta feature

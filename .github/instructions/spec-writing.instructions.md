@@ -3,48 +3,52 @@ description: "Use when writing specifications, features, tasks, bugfixes, or hot
 applyTo: "specs/**"
 ---
 
-# Spec Writing Standards
+# Padrões de Escrita de Specs
 
-## Spec Quality Criteria
+## Idioma das Specs
 
-Every specification must be **self-contained** — an AI agent should be able to implement it without additional context beyond the spec and the existing codebase.
+Escreva specs em **português brasileiro (pt-br)** por padrão, mantendo termos técnicos de engenharia de software em inglês. Siga as regras de idioma em `.github/instructions/language.instructions.md`.
 
-### Required Sections
+## Critérios de Qualidade
 
-1. **Title** — Clear, concise description of what needs to be done
-2. **Context** — Why this is needed, business motivation
-3. **Requirements** — Detailed list of what must be implemented
-4. **Acceptance Criteria** — Testable conditions that define "done"
-5. **Scope** — Explicit boundaries of what is and isn't included
-6. **Target Agent** — Which agent should execute this spec
+Cada especificação deve ser **autocontida** — um agente AI deve ser capaz de implementá-la sem contexto adicional além da spec e da base de código existente.
 
-### Optional Sections
+### Seções Obrigatórias
 
-- **Technical Notes** — Implementation hints or constraints
-- **Dependencies** — Other specs or systems this depends on
-- **References** — Links to related docs, designs, or discussions
-- **Priority** — Urgency level (P0-P3)
+1. **Título** — Descrição clara e concisa do que precisa ser feito
+2. **Contexto** — Por que isso é necessário, motivação de negócio
+3. **Requisitos** — Lista detalhada do que deve ser implementado
+4. **Critérios de Aceitação** — Condições testáveis que definem "concluído"
+5. **Escopo** — Limites explícitos do que está e não está incluído
+6. **Agente-Alvo** — Qual agente deve executar esta spec
 
-## Writing Guidelines
+### Seções Opcionais
 
-- Be specific — avoid ambiguous language like "should work well" or "handle appropriately"
-- Include examples for complex requirements
-- Reference existing code files when relevant
-- Define error scenarios and edge cases
-- Specify any performance or security requirements
+- **Notas Técnicas** — Dicas de implementação ou restrições
+- **Dependências** — Outras specs ou sistemas dos quais depende
+- **Referências** — Links para docs, designs ou discussões relacionados
+- **Prioridade** — Nível de urgência (P0-P3)
 
-## File Naming
+## Diretrizes de Escrita
 
-Use this convention: `{YYYY-MM-DD}-{short-slug}.md`
+- Seja específico — evite linguagem ambígua como "deve funcionar bem" ou "tratar adequadamente"
+- Inclua exemplos para requisitos complexos
+- Referencie arquivos de código existentes quando relevante
+- Defina cenários de erro e casos de borda
+- Especifique quaisquer requisitos de performance ou segurança
 
-Examples:
-- `2026-03-22-user-authentication.md`
-- `2026-03-22-fix-login-timeout.md`
+## Nomenclatura de Arquivos
 
-## Spec Lifecycle
+Use esta convenção: `{YYYY-MM-DD}-{short-slug}.md`
 
-1. **Draft** — Initial writing, may have gaps
-2. **Ready** — All sections complete, reviewed by product manager
-3. **In Progress** — Assigned to an agent, being implemented
-4. **Done** — Implementation complete, acceptance criteria met
-5. **Archived** — Moved to `specs/archive/` after completion
+Exemplos:
+- `2026-03-22-autenticacao-usuario.md`
+- `2026-03-22-corrigir-timeout-login.md`
+
+## Ciclo de Vida da Spec
+
+1. **Rascunho (Draft)** — Escrita inicial, pode ter lacunas
+2. **Pronto (Ready)** — Todas as seções completas, revisado pelo product manager
+3. **Em Progresso (In Progress)** — Atribuído a um agente, sendo implementado
+4. **Concluído (Done)** — Implementação completa, critérios de aceitação atendidos
+5. **Arquivado (Archived)** — Movido para `specs/archive/` após conclusão

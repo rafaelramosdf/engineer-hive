@@ -3,37 +3,38 @@ description: "Use when creating or updating project documentation, README files,
 applyTo: "docs/**"
 ---
 
-# Documentation Standards
+# Padrões de Documentação
 
-## Structure
+## Idioma
 
-- Use clear headings hierarchy (H1 → H2 → H3)
-- Start with a brief summary of what the document covers
-- Use bullet points for lists, numbered lists for sequences
-- Include a table of contents for documents longer than 3 sections
+- Escrever em **português brasileiro (pt-br)** por padrão
+- Manter termos técnicos de engenharia de software em inglês (API, endpoint, backend, frontend, deploy, etc.)
+- Usar voz ativa
+- Evitar jarão — explicar termos técnicos na primeira ocorrência quando o público não for técnico
+- Manter parágrafos curtos (máx. 3-5 frases)
 
-## Language
+## Estrutura
 
-- Write in clear, concise English
-- Use active voice
-- Avoid jargon — explain technical terms on first use
-- Keep paragraphs short (3-5 sentences max)
+- Usar hierarquia clara de títulos (H1 → H2 → H3)
+- Começar com um breve resumo do que o documento abrange
+- Usar listas com marcadores para itens, listas numeradas para sequências
+- Incluir sumário para documentos com mais de 3 seções
 
-## Code Examples
+## Exemplos de Código
 
-- Include runnable code examples for technical documentation
-- Use syntax highlighting with language identifiers
-- Keep examples minimal and focused on the concept being explained
-- Include expected output where helpful
+- Incluir exemplos de código executáveis para documentação técnica
+- Usar syntax highlighting com identificadores de linguagem
+- Manter exemplos mínimos e focados no conceito sendo explicado
+- Incluir output esperado onde útil
 
 ## Links
 
-- Use relative links for internal documentation
-- Verify all links are valid
-- Use descriptive link text (not "click here")
+- Usar links relativos para documentação interna
+- Verificar que todos os links são válidos
+- Usar texto descritivo para links (não "clique aqui")
 
-## Maintenance
+## Manutenção
 
-- Date all architecture decisions and changelogs
-- Mark deprecated content clearly with `> **Deprecated**:` callouts
-- Review and update documentation with every related code change
+- Datar todas as decisões de arquitetura e changelogs
+- Marcar conteúdo depreciado claramente com callouts `> **Depreciado**:`
+- Revisar e atualizar documentação a cada mudança de código relacionada

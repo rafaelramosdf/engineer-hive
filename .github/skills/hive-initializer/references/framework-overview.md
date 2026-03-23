@@ -1,76 +1,78 @@
-# Engineer Hive — Framework Overview
+# Engineer Hive — Visão Geral do Framework
 
-## What is Engineer Hive?
+## O que é o Engineer Hive?
 
-Engineer Hive is an AI-native engineering framework that functions as a complete software engineering team. It provides specialized AI agents, structured workflows, and standardized patterns to enable AI-first development.
+O Engineer Hive é um framework de engenharia AI-native que funciona como um time completo de engenharia de software. Ele fornece agentes AI especializados, fluxos de trabalho estruturados e padrões padronizados para habilitar o desenvolvimento AI-first.
 
-## Architecture
+## Arquitetura
 
 ```
 .github/
-├── copilot-instructions.md     # Global instructions & agent routing (bootstrap)
-├── agents/                     # Specialized AI agent definitions
-│   ├── hive-initializer        # Framework setup & configuration
-│   ├── doc-manager             # Documentation management
-│   ├── product-manager         # Product ownership & specs
-│   ├── architect               # Architecture decisions
-│   ├── design-ux-ui            # UX/UI design system
-│   ├── engineer-backend        # Backend engineering
-│   ├── engineer-frontend       # Frontend engineering
-│   └── bug-analyst             # Bug investigation
-├── instructions/               # File-specific coding guidelines
-│   ├── coding-standards        # Universal coding rules
-│   ├── spec-writing            # Specification standards
-│   ├── documentation-standards # Doc writing rules
-│   └── stack.*                 # Stack-specific rules (generated)
-├── prompts/                    # Reusable workflow templates
-│   ├── new-feature             # Create feature specs
-│   ├── new-task                # Create task specs
-│   ├── bugfix                  # Investigate and spec bugs
-│   ├── hotfix                  # Critical production fixes
-│   ├── init-project            # Initialize framework
-│   └── implement-spec          # Implement from spec
-├── skills/                     # Complex workflow skills
-│   ├── hive-initializer/       # Setup procedures & references
-│   └── architecture/           # Architecture knowledge base
-└── hooks/                      # Lifecycle automation
-specs/                          # Specifications (features, tasks, bugfixes, hotfixes)
-docs/                           # Human-readable project documentation
+├── copilot-instructions.md     # Instruções globais & roteamento de agentes (bootstrap)
+├── agents/                     # Definições de agentes AI especializados
+│   ├── hive-initializer        # Setup & configuração do framework
+│   ├── doc-manager             # Gerenciamento de documentação
+│   ├── product-manager         # Ownership do produto & specs
+│   ├── architect               # Decisões de arquitetura
+│   ├── design-ux-ui            # Design system UX/UI
+│   ├── engineer-backend        # Engenharia backend
+│   ├── engineer-frontend       # Engenharia frontend
+│   └── bug-analyst             # Investigação de bugs
+├── instructions/               # Diretrizes de código por arquivo
+│   ├── coding-standards        # Regras universais de código
+│   ├── spec-writing            # Padrões de especificação
+│   ├── documentation-standards # Regras de escrita de docs
+│   ├── language                # Configuração de idioma padrão
+│   └── stack.*                 # Regras específicas do stack (geradas)
+├── prompts/                    # Templates de fluxo de trabalho reutilizáveis
+│   ├── new-feature             # Criar specs de feature
+│   ├── new-task                # Criar specs de task
+│   ├── bugfix                  # Investigar e criar specs de bugs
+│   ├── hotfix                  # Correções críticas de produção
+│   ├── init-project            # Inicializar o framework
+│   └── implement-spec          # Implementar a partir de spec
+├── skills/                     # Skills de fluxos complexos
+│   ├── hive-initializer/       # Procedimentos de setup & referências
+│   └── architecture/           # Base de conhecimento de arquitetura
+└── hooks/                      # Automação do ciclo de vida
+specs/                          # Especificações (features, tasks, bugfixes, hotfixes)
+docs/                           # Documentação legível por humanos
 ```
 
-## Agent Routing
+## Roteamento de Agentes
 
-The bootstrap mechanism in `copilot-instructions.md` analyzes user intent and routes to the appropriate specialist agent. This enables AI-first development where engineers write specs and agents execute.
+O mecanismo de bootstrap em `copilot-instructions.md` analisa a intenção do usuário e encaminha ao agente especialista apropriado. Isso habilita o desenvolvimento AI-first onde engenheiros escrevem specs e agentes executam.
 
-## Workflow
+## Fluxo de Trabalho
 
 ```
-Engineer writes spec → Agent implements → Doc-manager updates docs → Commit
+Engenheiro escreve spec → Agente implementa → Doc-manager atualiza docs → Commit
 ```
 
-1. **Spec** — Engineer or product-manager writes a specification
-2. **Route** — Bootstrap identifies the right agent(s)
-3. **Execute** — Agent implements following project standards
-4. **Document** — Doc-manager reviews and updates documentation
-5. **Commit** — Changes follow project git conventions
+1. **Spec** — Engenheiro ou product-manager escreve uma especificação
+2. **Roteamento** — Bootstrap identifica o(s) agente(s) correto(s)
+3. **Execução** — Agente implementa seguindo os padrões do projeto
+4. **Documentar** — Doc-manager revisa e atualiza a documentação
+5. **Commit** — Mudanças seguem as convenções de git do projeto
 
-## Cross-Editor Compatibility
+## Compatibilidade Cross-Editor
 
-The framework uses `.github/` as the primary directory, which is recognized by:
-- **VS Code / GitHub Copilot**: Full native support for all primitives
-- **Cursor**: Supports `.github/` instructions and agents
-- **Claude Code**: Can use `.github/` alongside `.claude/`
-- **Other editors**: Most modern AI-enabled editors respect `.github/` conventions
+O framework usa `.github/` como diretório principal, que é reconhecido por:
+- **VS Code / GitHub Copilot**: Suporte nativo completo para todos os primitivos
+- **Cursor**: Suporta instruções e agentes do `.github/`
+- **Claude Code**: Pode usar `.github/` junto com `.claude/`
+- **Outros editores**: A maioria dos editores modernos com AI respeitam as convenções do `.github/`
 
-For editors that use different paths, the framework can be extended:
-- `.cursorrules` — Cursor-specific rules (link to `.github/copilot-instructions.md`)
-- `.claude/` — Claude Code specific settings
-- `.agents/` — Generic agents directory (alternative to `.github/agents/`)
+Para editores que usam caminhos diferentes, o framework pode ser estendido:
+- `.cursorrules` — Regras específicas do Cursor (linkar para `.github/copilot-instructions.md`)
+- `.claude/` — Configurações específicas do Claude Code
+- `.agents/` — Diretório genérico de agentes (alternativa ao `.github/agents/`)
 
-## Key Design Decisions
+## Decisões Chave de Design
 
-1. **Single source of truth**: `.github/copilot-instructions.md` is the entry point
-2. **Spec-driven**: All work starts as a specification
-3. **Agent autonomy**: Each agent has complete context for its domain
-4. **Progressive loading**: Skills use reference files to manage context efficiently
-5. **Stack agnostic**: Project-specific rules are generated, not hardcoded
+1. **Única fonte de verdade**: `.github/copilot-instructions.md` é o ponto de entrada
+2. **Orientado a specs**: Todo trabalho começa como uma especificação
+3. **Autonomia dos agentes**: Cada agente tem contexto completo para seu domínio
+4. **Carregamento progressivo**: Skills usam arquivos de referência para gerenciar o contexto eficientemente
+5. **Agnosto de stack**: Regras específicas do projeto são geradas, não hardcodadas
+6. **Idioma configurável**: Idioma padrão definido em `language.instructions.md`, reconfigurável via `@hive-initializer`

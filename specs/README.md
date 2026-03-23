@@ -1,46 +1,46 @@
-# Specifications
+# Especificações
 
-This directory contains all specifications for the project. Specs are the primary input for AI agents in the Engineer Hive framework.
+Este diretório contém todas as especificações do projeto. Specs são a entrada principal dos agentes AI no framework Engineer Hive.
 
-## Structure
+## Estrutura
 
 ```
 specs/
-├── templates/      # Specification templates
-├── features/       # Feature specifications
-├── tasks/          # Technical task specifications
-├── bugfixes/       # Bug investigation and fix specs
-└── hotfixes/       # Critical production fix specs
+├── templates/      # Templates de especificação
+├── features/       # Especificações de features
+├── tasks/          # Especificações de tasks técnicas
+├── bugfixes/       # Specs de investigação e correção de bugs
+└── hotfixes/       # Specs de correções críticas de produção
 ```
 
-## How to Use
+## Como Usar
 
-1. Choose the appropriate template from `templates/`
-2. Copy it to the correct subdirectory
-3. Fill in all required sections
-4. Name the file: `{YYYY-MM-DD}-{short-slug}.md`
-5. Invoke the appropriate agent to implement
+1. Escolha o template adequado em `templates/`
+2. Copie para o subdiretório correto
+3. Preencha todas as seções obrigatórias
+4. Nomeie o arquivo: `{YYYY-MM-DD}-{short-slug}.md`
+5. Invoque o agente apropriado para implementar
 
-## Quick Start
+## Início Rápido
 
-| I want to... | Template | Directory | Agent |
-|--------------|----------|-----------|-------|
-| Add new functionality | `feature.md` | `specs/features/` | `@product-manager` → `@engineer-*` |
-| Improve/refactor code | `task.md` | `specs/tasks/` | `@product-manager` → `@engineer-*` |
-| Fix a bug | `bugfix.md` | `specs/bugfixes/` | `@bug-analyst` → `@engineer-*` |
-| Fix critical production issue | `hotfix.md` | `specs/hotfixes/` | `@bug-analyst` → `@engineer-*` |
+| Eu quero... | Template | Diretório | Agente |
+|-------------|----------|-----------|--------|
+| Adicionar nova funcionalidade | `feature.md` | `specs/features/` | `@product-manager` → `@engineer-*` |
+| Melhorar/refatorar código | `task.md` | `specs/tasks/` | `@product-manager` → `@engineer-*` |
+| Corrigir um bug | `bugfix.md` | `specs/bugfixes/` | `@bug-analyst` → `@engineer-*` |
+| Corrigir problema crítico de produção | `hotfix.md` | `specs/hotfixes/` | `@bug-analyst` → `@engineer-*` |
 
-## Spec Lifecycle
+## Ciclo de Vida da Spec
 
-1. **Draft** → Initial writing
-2. **Ready** → All sections complete
-3. **In Progress** → Being implemented
-4. **Done** → Acceptance criteria met
-5. **Archived** → Move to `specs/archive/`
+1. **Rascunho (Draft)** → Escrita inicial
+2. **Pronto (Ready)** → Todas as seções completas
+3. **Em Progresso (In Progress)** → Sendo implementado
+4. **Concluído (Done)** → Critérios de aceitação atendidos
+5. **Arquivado (Archived)** → Mover para `specs/archive/`
 
-## Tips
+## Dicas
 
-- Use the `/new-feature`, `/new-task`, `/bugfix`, or `/hotfix` prompts to generate specs interactively
-- Always include acceptance criteria — they define "done"
-- Reference existing code files when relevant
-- Be specific: avoid ambiguous requirements
+- Use os prompts `/new-feature`, `/new-task`, `/bugfix` ou `/hotfix` para gerar specs de forma interativa
+- Sempre inclua critérios de aceitação — eles definem o "concluído"
+- Referencie arquivos de código existentes quando relevante
+- Seja específico: evite requisitos ambíguos

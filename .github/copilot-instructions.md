@@ -1,62 +1,73 @@
-# Engineer Hive — AI-Native Engineering Framework
+# Engineer Hive — Framework de Engenharia AI-Native
 
-You are operating inside a project powered by **Engineer Hive**, an AI-native engineering framework that functions as a complete software engineering team. This framework provides specialized agents, structured workflows, and standardized patterns to enable AI-first development.
+Você está operando dentro de um projeto movido pelo **Engineer Hive**, um framework de engenharia AI-native que funciona como um time completo de engenharia de software. Este framework fornece agentes especializados, fluxos de trabalho estruturados e padrões padronizados para habilitar o desenvolvimento AI-first.
 
-## Bootstrap — Agent Routing
+## Idioma Padrão
 
-When the user submits a prompt, analyze the intent and recommend or delegate to the most appropriate specialist agent. Use the following routing table:
+O idioma padrão deste projeto é **português brasileiro (pt-br)**. Todos os agentes devem responder em pt-br por padrão, mantendo termos técnicos de engenharia de software em inglês (API, commit, branch, deploy, backend, frontend, etc.).
 
-| Intent | Agent | Trigger Keywords |
-|--------|-------|------------------|
-| Framework setup, configuration, onboarding | `@hive-initializer` | init, setup, configure, onboard, hive, framework |
-| Documentation creation or updates | `@doc-manager` | docs, documentation, readme, update docs, changelog |
-| Feature definition, specs, product vision | `@product-manager` | feature, spec, requirement, roadmap, user story, planning |
-| Architecture, design patterns, system design | `@architect` | architecture, pattern, design decision, refactor structure, system design |
-| UI/UX design, design system, visual patterns | `@design-ux-ui` | design, ui, ux, component, design system, tokens, layout |
-| Backend development, APIs, database | `@engineer-backend` | api, backend, server, database, endpoint, migration, service |
-| Frontend development, interface | `@engineer-frontend` | frontend, component, page, ui implementation, client |
-| Bug investigation, diagnosis | `@bug-analyst` | bug, error, crash, investigate, debug, broken, unexpected behavior |
+O idioma padrão é configurável via `@hive-initializer`. Consulte `.github/instructions/language.instructions.md` para as regras completas de idioma.
 
-When the intent spans multiple domains, suggest the primary agent and mention which secondary agents may be needed.
+## Bootstrap — Roteamento de Agentes
 
-## Project Structure
+Quando o usuário enviar um prompt, analise a intenção e recomende ou delegue ao agente especialista mais adequado. Use a tabela de roteamento abaixo:
+
+| Intenção | Agente | Palavras-chave |
+|----------|--------|----------------|
+| Configuração do framework, onboarding | `@hive-initializer` | init, setup, configurar, onboard, hive, framework, idioma, linguagem |
+| Criação ou atualização de documentação | `@doc-manager` | docs, documentação, readme, atualizar docs, changelog |
+| Definição de features, specs, visão de produto | `@product-manager` | feature, spec, requisito, roadmap, user story, planejamento |
+| Arquitetura, padrões de design, design de sistema | `@architect` | arquitetura, pattern, decisão de design, refatorar estrutura, system design |
+| Design UI/UX, design system, padrões visuais | `@design-ux-ui` | design, ui, ux, componente, design system, tokens, layout |
+| Desenvolvimento backend, APIs, banco de dados | `@engineer-backend` | api, backend, servidor, banco de dados, endpoint, migration, service |
+| Desenvolvimento frontend, interface | `@engineer-frontend` | frontend, componente, página, implementação de ui, client |
+| Investigação de bugs, diagnóstico | `@bug-analyst` | bug, erro, crash, investigar, debug, quebrado, comportamento inesperado |
+
+Quando a intenção abranger múltiplos domínios, sugira o agente primário e mencione quais agentes secundários podem ser necessários.
+
+## Estrutura do Projeto
 
 ```
 .github/
-├── copilot-instructions.md     # This file — global instructions & routing
-├── agents/                     # Specialized AI agents
-├── instructions/               # File-specific coding guidelines
-├── prompts/                    # Reusable task templates
-├── skills/                     # Complex workflow skills with assets
-└── hooks/                      # Lifecycle automation hooks
-specs/                          # Feature, task, bugfix, hotfix specifications
-docs/                           # Human-readable project documentation
+├── copilot-instructions.md     # Este arquivo — instruções globais & roteamento
+├── agents/                     # Agentes AI especializados
+├── instructions/               # Diretrizes de código por arquivo
+├── prompts/                    # Templates reutilizáveis de tarefas
+├── skills/                     # Skills de fluxos complexos com assets
+└── hooks/                      # Hooks de automação do ciclo de vida
+specs/                          # Especificações de features, tasks, bugfixes, hotfixes
+docs/                           # Documentação legível por humanos
 ```
 
-## Core Principles
+## Princípios Fundamentais
 
-1. **Spec-Driven Development**: Features, tasks, and fixes start as specifications in `specs/`. Agents consume specs as their primary input.
-2. **Agent Autonomy**: Each agent operates independently within its domain. Minimize human intervention by providing sufficient context in specs.
-3. **Documentation as Code**: Every implementation change triggers documentation review. The `@doc-manager` agent is notified after engineering changes.
-4. **Consistency First**: Follow project-specific patterns defined in `.github/instructions/`. When in doubt, check existing code for conventions.
-5. **Progressive Delegation**: Start with the most specific agent. Escalate to broader agents only when the task crosses domain boundaries.
+1. **Desenvolvimento Orientado a Specs**: Features, tasks e correções começam como especificações em `specs/`. Agentes consomem specs como entrada principal.
+2. **Autonomia dos Agentes**: Cada agente opera de forma independente dentro do seu domínio. Minimize a intervenção humana fornecendo contexto suficiente nas specs.
+3. **Documentação como Código**: Toda mudança de implementação dispara uma revisão de documentação. O agente `@doc-manager` é notificado após mudanças de engenharia.
+4. **Consistência em Primeiro Lugar**: Siga os padrões específicos do projeto definidos em `.github/instructions/`. Em caso de dúvida, verifique o código existente para convenções.
+5. **Delegação Progressiva**: Comece com o agente mais específico. Escale para agentes mais amplos apenas quando a tarefa cruzar fronteiras de domínio.
 
-## Workflow — Spec to Implementation
+## Fluxo de Trabalho — Spec para Implementação
 
-1. Engineer writes a spec in `specs/features/`, `specs/tasks/`, `specs/bugfixes/`, or `specs/hotfixes/`
-2. Appropriate agent is invoked with the spec as context
-3. Agent implements following project standards and patterns
-4. After implementation, `@doc-manager` reviews and updates documentation
-5. Changes are committed following project conventions
+1. Engenheiro escreve uma spec em `specs/features/`, `specs/tasks/`, `specs/bugfixes/` ou `specs/hotfixes/`
+2. O agente apropriado é invocado com a spec como contexto
+3. O agente implementa seguindo os padrões e convenções do projeto
+4. Após a implementação, `@doc-manager` revisa e atualiza a documentação
+5. As mudanças são commitadas seguindo as convenções do projeto
 
-## Cross-Agent Communication Protocol
+## Protocolo de Comunicação entre Agentes
 
-When an engineering agent (backend/frontend) completes implementation:
-- Summarize changes made (files created, modified, deleted)
-- List any new dependencies or configurations added
-- Flag any documentation that needs creation or updates
-- The `@doc-manager` agent should be invoked with this summary
+Quando um agente de engenharia (backend/frontend) concluir uma implementação:
+- Resumir as mudanças feitas (arquivos criados, modificados, deletados)
+- Listar novas dependências ou configurações adicionadas
+- Sinalizar qual documentação precisa ser criada ou atualizada
+- O agente `@doc-manager` deve ser invocado com esse resumo
 
-## Stack Configuration
+## Configuração de Stack e Idioma
 
-This project's stack and architecture are configured via the Hive Initializer. Stack-specific instructions are stored in `.github/instructions/` and referenced by each agent. If no stack is configured yet, invoke `@hive-initializer` to set up.
+O stack e arquitetura do projeto são configurados via Hive Initializer. Instruções específicas do stack são armazenadas em `.github/instructions/` e referenciadas por cada agente.
+
+- **Idioma padrão**: configurado em `.github/instructions/language.instructions.md`
+- **Stack do projeto**: configurado em `.github/instructions/stack.instructions.md`
+
+Se nenhum stack ou idioma estiver configurado ainda, invoque `@hive-initializer` para configurar.

@@ -1,77 +1,77 @@
-# Software Architecture Patterns
+# Padrões de Arquitetura de Software
 
-## Application Architectures
+## Arquiteturas de Aplicação
 
 ### Monolith
-- **Best for**: Small teams, early-stage products, simple domains
-- **Structure**: Single deployable unit with all functionality
-- **Pros**: Simple deployment, easy debugging, shared code
-- **Cons**: Scaling limitations, deployment coupling, growing complexity
-- **Evolve to**: Modular Monolith → Microservices (if needed)
+- **Melhor para**: Times pequenos, produtos em estágio inicial, domínios simples
+- **Estrutura**: Unidade de deployment única com toda a funcionalidade
+- **Pros**: Deployment simples, debugging fácil, código compartilhado
+- **Cons**: Limitações de escala, acoplamento de deployment, crescimento de complexidade
+- **Evoluir para**: Modular Monolith → Microservices (se necessário)
 
 ### Modular Monolith
-- **Best for**: Medium teams, growing products, clear domain boundaries
-- **Structure**: Single deployment with well-defined module boundaries
-- **Pros**: Monolith simplicity + module isolation, easier future extraction
-- **Cons**: Requires discipline to maintain boundaries
-- **Key rule**: Modules communicate through defined interfaces, not shared database tables
+- **Melhor para**: Times médios, produtos em crescimento, limites de domínio claros
+- **Estrutura**: Deployment único com limites de módulo bem definidos
+- **Pros**: Simplicidade do monolith + isolação de módulos, extração futura mais fácil
+- **Cons**: Requer disciplina para manter os limites
+- **Regra chave**: Módulos se comunicam através de interfaces definidas, não tabelas de banco compartilhadas
 
 ### Microservices
-- **Best for**: Large teams, mature products, independent scaling needs
-- **Structure**: Independent services with own data stores, communicating via APIs/events
-- **Pros**: Independent deployment, team autonomy, targeted scaling
-- **Cons**: Distributed system complexity, data consistency challenges, operational overhead
-- **Prerequisites**: Strong DevOps, monitoring, and team maturity
+- **Melhor para**: Times grandes, produtos maduros, necessidades de escalonamento independente
+- **Estrutura**: Serviços independentes com seus próprios data stores, comunicando via APIs/eventos
+- **Pros**: Deployment independente, autonomia do time, escalonamento direcionado
+- **Cons**: Complexidade de sistema distribuído, desafios de consistência de dados, overhead operacional
+- **Pré-requisitos**: DevOps sólido, monitoramento e maturidade do time
 
 ### Serverless
-- **Best for**: Event-driven workloads, variable traffic, rapid prototyping
-- **Structure**: Functions as deployment units, managed infrastructure
-- **Pros**: No server management, pay-per-use, auto-scaling
-- **Cons**: Cold starts, vendor lock-in, debugging complexity
+- **Melhor para**: Cargas event-driven, tráfego variável, prototipagem rápida
+- **Estrutura**: Funções como unidades de deployment, infraestrutura gerenciada
+- **Pros**: Sem gerenciamento de servidor, pagamento por uso, auto-scaling
+- **Cons**: Cold starts, vendor lock-in, complexidade de debugging
 
-## Layered Architectures
+## Arquiteturas em Camadas
 
 ### Clean Architecture (Hexagonal/Onion)
-- **Core principle**: Dependencies point inward — business logic has no external dependencies
-- **Layers**: Entities → Use Cases → Interface Adapters → Frameworks/Drivers
-- **Key benefit**: Business logic is testable without infrastructure
+- **Princípio central**: Dependências apontam para dentro — lógica de negócio não tem dependências externas
+- **Camadas**: Entidades → Use Cases → Interface Adapters → Frameworks/Drivers
+- **Benefício chave**: Lógica de negócio é testável sem infraestrutura
 
 ### Vertical Slice
-- **Core principle**: Organize by feature, not by layer
-- **Structure**: Each feature contains its own handler, model, validation, persistence
-- **Key benefit**: Changes are localized to a single slice
+- **Princípio central**: Organizar por feature, não por camada
+- **Estrutura**: Cada feature contém seu próprio handler, model, validação, persistência
+- **Benefício chave**: Mudanças ficam localizadas em um único slice
 
-## Data Patterns
+## Padrões de Dados
 
 ### CQRS (Command Query Responsibility Segregation)
-- **When**: Read and write models differ significantly
-- **Structure**: Separate command (write) and query (read) models
-- **Complexity**: Medium-high — use only when justified
+- **Quando usar**: Modelos de leitura e escrita diferem significativamente
+- **Estrutura**: Modelos separados de command (escrita) e query (leitura)
+- **Complexidade**: Médio-alta — usar somente quando justificado
 
 ### Event Sourcing
-- **When**: Full audit trail needed, or complex domain state transitions
-- **Structure**: Store events, not current state; rebuild state from event history
-- **Complexity**: High — use only for domains that truly benefit
+- **Quando usar**: Trilha de auditoria completa necessária, ou transições de estado de domínio complexas
+- **Estrutura**: Armazenar eventos, não estado atual; reconstruir estado a partir do histórico de eventos
+- **Complexidade**: Alta — usar somente para domínios que realmente se beneficiam
 
 ### Domain-Driven Design (DDD)
-- **When**: Complex business domains with rich behavior
-- **Concepts**: Bounded Contexts, Aggregates, Entities, Value Objects, Domain Events
-- **Key benefit**: Code structure mirrors business domain
+- **Quando usar**: Domínios de negócio complexos com comportamento rico
+- **Conceitos**: Bounded Contexts, Aggregates, Entities, Value Objects, Domain Events
+- **Benefício chave**: Estrutura do código espelha o domínio de negócio
 
-## API Architecture
+## Arquitetura de API
 
 ### REST
-- **Best for**: CRUD-heavy, public APIs, broad client support
-- **Principles**: Resources, HTTP methods, status codes, HATEOAS
+- **Melhor para**: APIs CRUD-heavy, APIs públicas, amplo suporte de clientes
+- **Princípios**: Recursos, métodos HTTP, status codes, HATEOAS
 
 ### GraphQL
-- **Best for**: Complex data requirements, multiple frontend consumers
-- **Principles**: Schema-first, single endpoint, client-driven queries
+- **Melhor para**: Requisitos de dados complexos, múltiplos consumidores frontend
+- **Princípios**: Schema-first, endpoint único, queries orientadas pelo cliente
 
 ### gRPC
-- **Best for**: Service-to-service communication, high performance
-- **Principles**: Protocol Buffers, bidirectional streaming, code generation
+- **Melhor para**: Comunicação serviço-a-serviço, alta performance
+- **Princípios**: Protocol Buffers, bidirectional streaming, geração de código
 
 ### tRPC
-- **Best for**: TypeScript full-stack, end-to-end type safety
-- **Principles**: Shared types between client and server, no code generation
+- **Melhor para**: Full-stack TypeScript, type safety end-to-end
+- **Princípios**: Tipos compartilhados entre cliente e servidor, sem geração de código

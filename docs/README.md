@@ -1,36 +1,36 @@
-# Project Documentation
+# Documentação do Projeto
 
-This directory contains all human-readable project documentation.
+Este diretório contém toda a documentação legível por humanos do projeto.
 
-## Structure
+## Estrutura
 
 ```
 docs/
-├── README.md                   # This file — documentation index
-├── architecture/               # Architecture documentation
-│   ├── overview.md             # System architecture overview
+├── README.md                   # Este arquivo — índice da documentação
+├── architecture/               # Documentação de arquitetura
+│   ├── overview.md             # Visão geral da arquitetura do sistema
 │   └── decisions/              # Architecture Decision Records (ADRs)
-├── api/                        # API documentation
-├── guides/                     # User and developer guides
-│   ├── getting-started.md      # Quick start guide
-│   └── contributing.md         # Contribution guidelines
-├── design-system/              # Design system documentation
-│   ├── tokens/                 # Design tokens (colors, typography, spacing)
-│   ├── components/             # Component specifications
-│   └── patterns/               # UX patterns
-└── changelog/                  # Release notes
+├── api/                        # Documentação de API
+├── guides/                     # Guias de usuário e desenvolvedor
+│   ├── getting-started.md      # Guia de início rápido
+│   └── contributing.md         # Diretrizes de contribuição
+├── design-system/              # Documentação do design system
+│   ├── tokens/                 # Design tokens (cores, tipografia, espaçamento)
+│   ├── components/             # Especificações de componentes
+│   └── patterns/               # Padrões de UX
+└── changelog/                  # Notas de release
 ```
 
-## For AI Agents
+## Para Agentes AI
 
-AI agent documentation lives in the framework directory (`.github/`):
-- Agent definitions → `.github/agents/`
-- Coding guidelines → `.github/instructions/`
-- Workflow skills → `.github/skills/`
-- Task prompts → `.github/prompts/`
+A documentação de agentes AI vive no diretório do framework (`.github/`):
+- Definições de agentes → `.github/agents/`
+- Diretrizes de código → `.github/instructions/`
+- Skills de fluxo → `.github/skills/`
+- Prompts de tarefas → `.github/prompts/`
 
-This `docs/` directory is for **human-readable** project documentation.
+Este diretório `docs/` é para documentação do projeto **legível por humanos**.
 
-## Maintained By
+## Manutenção
 
-The `@doc-manager` agent is responsible for keeping this documentation accurate and up-to-date. After any engineering change, the doc-manager reviews and updates affected docs.
+O agente `@doc-manager` é responsável por manter essa documentação precisa e atualizada. Após qualquer mudança de engenharia, o doc-manager revisa e atualiza os docs afetados.

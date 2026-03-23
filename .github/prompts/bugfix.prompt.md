@@ -1,16 +1,16 @@
 ---
-description: "Create a bugfix specification with investigation and diagnosis"
+description: "Criar uma especificação de bugfix com investigação e diagnóstico"
 agent: "bug-analyst"
-argument-hint: "Describe the bug or unexpected behavior"
+argument-hint: "Descreva o bug ou comportamento inesperado"
 ---
 
-Investigate and create a bugfix specification using the template at [bugfix template](../../../specs/templates/bugfix.md).
+Investigue e crie uma especificação de bugfix usando o template em [bugfix template](../../../specs/templates/bugfix.md).
 
-Follow these steps:
-1. Understand the bug report from the user's input
-2. Investigate the codebase to identify the root cause
-3. Assess the impact and severity of the bug
-4. Propose a fix with specific code changes
-5. Write a complete diagnosis report as a bugfix spec
-6. Save to `specs/bugfixes/` using the naming convention `{YYYY-MM-DD}-{short-slug}.md`
-7. Assign to the appropriate engineering agent
+Siga estes passos:
+1. Entenda o report do bug a partir do input do usuário
+2. Investigue a base de código para identificar a causa raiz
+3. Avalie o impacto e a severidade do bug
+4. Proponha uma correção com mudanças específicas de código
+5. Escreva um relatório de diagnóstico completo como spec de bugfix
+6. Salve em `specs/bugfixes/` usando a convenção de nome `{YYYY-MM-DD}-{short-slug}.md`
+7. Atribua ao agente de engenharia apropriado

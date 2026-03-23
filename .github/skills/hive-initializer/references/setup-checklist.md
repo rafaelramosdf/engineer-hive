@@ -1,69 +1,72 @@
-# Setup Checklist
+# Checklist de Setup
 
-## Information to Gather
+## Informações para Coletar
 
-Use this checklist when setting up Engineer Hive for a project.
+Use este checklist ao configurar o Engineer Hive para um projeto.
 
-### Core Stack
+### Configuração Básica
 
-- [ ] **Primary language(s)**: e.g., TypeScript, Python, Go, Java, C#, Rust
-- [ ] **Runtime/Platform**: e.g., Node.js, .NET, JVM, Browser
-- [ ] **Package manager**: e.g., npm, pnpm, yarn, pip, cargo, maven
+- [ ] **Idioma padrão do projeto**: ex.: Português Brasileiro (pt-br), English (en), Español (es)
+- [ ] **Linguagem(ns) principal(is)**: ex.: TypeScript, Python, Go, Java, C#, Rust
+- [ ] **Runtime/Plataforma**: ex.: Node.js, .NET, JVM, Browser
+- [ ] **Gerenciador de pacotes**: ex.: npm, pnpm, yarn, pip, cargo, maven
 
-### Backend (if applicable)
+### Backend (se aplicável)
 
-- [ ] **Framework**: e.g., Express, NestJS, FastAPI, Django, Spring Boot, ASP.NET
-- [ ] **Database**: e.g., PostgreSQL, MySQL, MongoDB, SQLite, Redis
-- [ ] **ORM/Query Builder**: e.g., Prisma, TypeORM, SQLAlchemy, Entity Framework
-- [ ] **Authentication**: e.g., JWT, OAuth2, Session-based, Auth0, Clerk
-- [ ] **API style**: e.g., REST, GraphQL, gRPC, tRPC
+- [ ] **Framework**: ex.: Express, NestJS, FastAPI, Django, Spring Boot, ASP.NET
+- [ ] **Banco de dados**: ex.: PostgreSQL, MySQL, MongoDB, SQLite, Redis
+- [ ] **ORM/Query Builder**: ex.: Prisma, TypeORM, SQLAlchemy, Entity Framework
+- [ ] **Autenticação**: ex.: JWT, OAuth2, Session-based, Auth0, Clerk
+- [ ] **Estilo de API**: ex.: REST, GraphQL, gRPC, tRPC
 
-### Frontend (if applicable)
+### Frontend (se aplicável)
 
-- [ ] **Framework**: e.g., React, Next.js, Vue, Nuxt, Angular, Svelte, Astro
-- [ ] **Styling**: e.g., Tailwind CSS, CSS Modules, Styled Components, Sass
-- [ ] **State management**: e.g., Redux, Zustand, Pinia, Signals
-- [ ] **Component library**: e.g., Shadcn/ui, Material UI, Radix, Headless UI
+- [ ] **Framework**: ex.: React, Next.js, Vue, Nuxt, Angular, Svelte, Astro
+- [ ] **Estilização**: ex.: Tailwind CSS, CSS Modules, Styled Components, Sass
+- [ ] **Gerenciamento de estado**: ex.: Redux, Zustand, Pinia, Signals
+- [ ] **Biblioteca de componentes**: ex.: Shadcn/ui, Material UI, Radix, Headless UI
 
-### Architecture
+### Arquitetura
 
-- [ ] **Pattern**: e.g., Monolith, Microservices, Modular Monolith, Serverless
-- [ ] **Project structure**: e.g., Feature-based, Layer-based, Domain-driven
-- [ ] **Monorepo**: e.g., Turborepo, Nx, pnpm workspaces, or single repo
+- [ ] **Padrão**: ex.: Monolith, Microservices, Modular Monolith, Serverless
+- [ ] **Estrutura do projeto**: ex.: Feature-based, Layer-based, Domain-driven
+- [ ] **Monorepo**: ex.: Turborepo, Nx, pnpm workspaces, ou repositório único
 
-### Quality & DevOps
+### Qualidade & DevOps
 
-- [ ] **Testing framework**: e.g., Jest, Vitest, Pytest, xUnit, Go test
-- [ ] **E2E testing**: e.g., Playwright, Cypress, Selenium
-- [ ] **Linter**: e.g., ESLint, Ruff, golangci-lint, Roslyn analyzers
-- [ ] **Formatter**: e.g., Prettier, Black, gofmt, dotnet format
-- [ ] **CI/CD**: e.g., GitHub Actions, GitLab CI, Jenkins, Azure DevOps
-- [ ] **Deployment**: e.g., Vercel, AWS, Azure, GCP, Docker, Kubernetes
+- [ ] **Framework de testes**: ex.: Jest, Vitest, Pytest, xUnit, Go test
+- [ ] **Testes E2E**: ex.: Playwright, Cypress, Selenium
+- [ ] **Linter**: ex.: ESLint, Ruff, golangci-lint, Roslyn analyzers
+- [ ] **Formatter**: ex.: Prettier, Black, gofmt, dotnet format
+- [ ] **CI/CD**: ex.: GitHub Actions, GitLab CI, Jenkins, Azure DevOps
+- [ ] **Deployment**: ex.: Vercel, AWS, Azure, GCP, Docker, Kubernetes
 
-### Conventions
+### Convenções
 
-- [ ] **Git workflow**: e.g., Trunk-based, GitFlow, GitHub Flow
-- [ ] **Branch naming**: e.g., `feature/`, `fix/`, `chore/`
-- [ ] **Commit format**: e.g., Conventional Commits, custom format
-- [ ] **PR process**: e.g., Required reviews, CI checks, auto-merge
+- [ ] **Fluxo Git**: ex.: Trunk-based, GitFlow, GitHub Flow
+- [ ] **Nomenclatura de branch**: ex.: `feature/`, `fix/`, `chore/`
+- [ ] **Formato de commit**: ex.: Conventional Commits, formato customizado
+- [ ] **Processo de PR**: ex.: Revisões obrigatórias, verificações de CI, auto-merge
 
-## Generated Files
+## Arquivos Gerados
 
-After gathering information, create these files:
+Após coletar as informações, criar estes arquivos:
 
-| File | Content |
-|------|---------|
-| `.github/instructions/stack.instructions.md` | Stack-specific coding rules and patterns |
-| `.github/instructions/stack-backend.instructions.md` | Backend-specific conventions (if applicable) |
-| `.github/instructions/stack-frontend.instructions.md` | Frontend-specific conventions (if applicable) |
-| `.github/instructions/testing.instructions.md` | Testing patterns and conventions |
-| `.github/instructions/git-workflow.instructions.md` | Git and CI/CD conventions |
+| Arquivo | Conteúdo |
+|---------|----------|
+| `.github/instructions/language.instructions.md` | Configuração de idioma padrão do projeto |
+| `.github/instructions/stack.instructions.md` | Regras e padrões de código específicos do stack |
+| `.github/instructions/stack-backend.instructions.md` | Convenções específicas do backend (se aplicável) |
+| `.github/instructions/stack-frontend.instructions.md` | Convenções específicas do frontend (se aplicável) |
+| `.github/instructions/testing.instructions.md` | Padrões e convenções de testes |
+| `.github/instructions/git-workflow.instructions.md` | Convenções de Git e CI/CD |
 
-## Validation
+## Validação
 
-After setup, verify:
-1. All instruction files reference the correct stack
-2. Agent files can access relevant instructions
-3. Spec templates are ready for use
-4. Documentation structure reflects the project
-5. Run a test prompt with each agent to verify routing
+Após o setup, verificar:
+1. Todos os arquivos de instrução referenciam o stack correto
+2. Os arquivos de agente conseguem acessar as instruções relevantes
+3. Os templates de spec estão prontos para uso
+4. A estrutura de documentação reflete o projeto
+5. O arquivo `language.instructions.md` está configurado corretamente
+6. Executar um prompt de teste com cada agente para verificar o roteamento

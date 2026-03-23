@@ -1,49 +1,49 @@
-# Task: {Title}
+# Task: {Título}
 
-> **Status**: Draft
-> **Date**: {YYYY-MM-DD}
-> **Author**: {name}
-> **Priority**: {P0 | P1 | P2 | P3}
-> **Target Agent**: {`@engineer-backend` | `@engineer-frontend` | `@architect` | both}
+> **Status**: Rascunho
+> **Data**: {YYYY-MM-DD}
+> **Autor**: {nome}
+> **Prioridade**: {P0 | P1 | P2 | P3}
+> **Agente-Alvo**: {`@engineer-backend` | `@engineer-frontend` | `@architect` | ambos}
 
-## Context
+## Contexto
 
-{Why is this task needed? What technical problem does it address?}
+{Por que esta task é necessária? Qual problema técnico ela endereça?}
 
-## Objective
+## Objetivo
 
-{Clear statement of what needs to be accomplished}
+{Declaração clara do que precisa ser realizado}
 
-## Requirements
+## Requisitos
 
-1. {Requirement 1}
-2. {Requirement 2}
-3. {Requirement 3}
+1. {Requisito 1}
+2. {Requisito 2}
+3. {Requisito 3}
 
-## Acceptance Criteria
+## Critérios de Aceitação
 
-- [ ] {Testable condition 1}
-- [ ] {Testable condition 2}
-- [ ] {Testable condition 3}
+- [ ] {Condição testável 1}
+- [ ] {Condição testável 2}
+- [ ] {Condição testável 3}
 
-## Scope
+## Escopo
 
-### In Scope
-- {What IS included}
+### Incluso
+- {O que ESTÁ incluído}
 
-### Out of Scope
-- {What is NOT included}
+### Excluído
+- {O que NÃO está incluído}
 
-## Technical Approach
+## Abordagem Técnica
 
-{Suggested approach, if any. The implementing agent may choose a different approach if justified.}
+{Abordagem sugerida, se houver. O agente implementador pode escolher uma abordagem diferente se justificado.}
 
-## Impact Assessment
+## Avaliação de Impacto
 
-- **Files affected**: {estimated scope of changes}
-- **Risk level**: {low | medium | high}
-- **Breaking changes**: {yes/no, details}
+- **Arquivos afetados**: {escopo estimado das mudanças}
+- **Nível de risco**: {baixo | médio | alto}
+- **Breaking changes**: {sim/não, detalhes}
 
-## Dependencies
+## Dependências
 
-- {Other specs, services, or systems this depends on}
+- {Outras specs, serviços ou sistemas dos quais depende}

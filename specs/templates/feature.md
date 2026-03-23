@@ -1,56 +1,56 @@
-# Feature: {Title}
+# Feature: {Título}
 
-> **Status**: Draft
-> **Date**: {YYYY-MM-DD}
-> **Author**: {name}
-> **Priority**: {P0 | P1 | P2 | P3}
-> **Target Agent**: {`@engineer-backend` | `@engineer-frontend` | both}
+> **Status**: Rascunho
+> **Data**: {YYYY-MM-DD}
+> **Autor**: {nome}
+> **Prioridade**: {P0 | P1 | P2 | P3}
+> **Agente-Alvo**: {`@engineer-backend` | `@engineer-frontend` | ambos}
 
-## Context
+## Contexto
 
-{Why is this feature needed? What business problem does it solve? What is the current state?}
+{Por que esta feature é necessária? Qual problema de negócio ela resolve? Qual é o estado atual?}
 
-## Requirements
+## Requisitos
 
-### Functional Requirements
+### Requisitos Funcionais
 
-1. {Requirement 1}
-2. {Requirement 2}
-3. {Requirement 3}
+1. {Requisito 1}
+2. {Requisito 2}
+3. {Requisito 3}
 
-### Non-Functional Requirements
+### Requisitos Não-Funcionais
 
-- **Performance**: {any performance requirements}
-- **Security**: {any security requirements}
-- **Accessibility**: {any accessibility requirements}
+- **Performance**: {requisitos de performance, se houver}
+- **Segurança**: {requisitos de segurança, se houver}
+- **Acessibilidade**: {requisitos de acessibilidade, se houver}
 
 ## User Stories
 
-- As a {role}, I want to {action}, so that {benefit}
-- As a {role}, I want to {action}, so that {benefit}
+- Como {papel}, quero {ação}, para que {benefício}
+- Como {papel}, quero {ação}, para que {benefício}
 
-## Acceptance Criteria
+## Critérios de Aceitação
 
-- [ ] {Testable condition 1}
-- [ ] {Testable condition 2}
-- [ ] {Testable condition 3}
+- [ ] {Condição testável 1}
+- [ ] {Condição testável 2}
+- [ ] {Condição testável 3}
 
-## Scope
+## Escopo
 
-### In Scope
-- {What IS included in this feature}
+### Incluso
+- {O que ESTÁ incluído nesta feature}
 
-### Out of Scope
-- {What is NOT included — explicit boundaries}
+### Excluído
+- {O que NÃO está incluído — limites explícitos}
 
-## Technical Notes
+## Notas Técnicas
 
-{Any implementation hints, constraints, or architectural considerations}
+{Dicas de implementação, restrições ou considerações arquiteturais}
 
-## Dependencies
+## Dependências
 
-- {Other specs, services, or systems this depends on}
+- {Outras specs, serviços ou sistemas dos quais depende}
 
-## References
+## Referências
 
-- {Links to designs, discussions, or related documentation}
+- {Links para designs, discussões ou documentação relacionada}

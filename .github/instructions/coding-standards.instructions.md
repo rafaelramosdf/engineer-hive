@@ -3,59 +3,63 @@ description: "Use when writing or reviewing code in any language. Covers general
 applyTo: "**"
 ---
 
-# Coding Standards
+# Padrões de Código
 
-## General Principles
+## Idioma
 
-- Write clean, readable, self-documenting code
-- Follow the Single Responsibility Principle
-- Prefer composition over inheritance
-- Keep functions small and focused (max ~30 lines)
-- Use meaningful, descriptive names for variables, functions, and classes
-- Avoid magic numbers — use named constants
-- Handle errors explicitly — never swallow exceptions silently
+Comentários de código, mensagens de erro, variáveis e documentação devem seguir o idioma padrão do projeto definido em `.github/instructions/language.instructions.md` (padrão: **pt-br**). Termos técnicos como nomes de padrões de design, APIs e tecnologias permanecem em inglês.
 
-## Naming Conventions
+## Princípios Gerais
 
-- **Files**: Use the naming convention established by the project's stack (kebab-case, camelCase, PascalCase, etc.)
-- **Functions/Methods**: Use verbs that describe what they do (`getUserById`, `calculateTotal`)
-- **Variables**: Use nouns that describe what they hold (`userList`, `totalAmount`)
-- **Booleans**: Use `is`, `has`, `should` prefixes (`isActive`, `hasPermission`)
-- **Constants**: Use UPPER_SNAKE_CASE for true constants
+- Escrever código limpo, legível e autodocumentado
+- Seguir o Princípio da Responsabilidade Única (Single Responsibility Principle)
+- Preferir composição à herança
+- Manter funções pequenas e focadas (máx. ~30 linhas)
+- Usar nomes significativos e descritivos para variáveis, funções e classes
+- Evitar números mágicos — usar constantes nomeadas
+- Tratar erros explicitamente — nunca engolir exceções silenciosamente
 
-## Code Organization
+## Convenções de Nomenclatura
 
-- Group related functionality together
-- Separate concerns (data access, business logic, presentation)
-- Keep imports organized and sorted
-- Remove unused code, imports, and dependencies
+- **Arquivos**: Usar a convenção estabelecida pelo stack do projeto (kebab-case, camelCase, PascalCase, etc.)
+- **Funções/Métodos**: Usar verbos que descrevem o que fazem (`getUserById`, `calculateTotal`)
+- **Variáveis**: Usar substantivos que descrevem o que contêm (`userList`, `totalAmount`)
+- **Booleanos**: Usar prefixos `is`, `has`, `should` (`isActive`, `hasPermission`)
+- **Constantes**: Usar UPPER_SNAKE_CASE para constantes verdadeiras
 
-## Comments
+## Organização do Código
 
-- Write code that explains itself — minimize comments
-- Use comments for "why", not "what"
-- Document public APIs and complex algorithms
-- Keep comments up-to-date with code changes
+- Agrupar funcionalidades relacionadas
+- Separar concerns (acesso a dados, lógica de negócio, apresentação)
+- Manter imports organizados e ordenados
+- Remover código, imports e dependências não utilizados
 
-## Testing
+## Comentários
 
-- Write tests for all new functionality
-- Follow the Arrange-Act-Assert pattern
-- Use descriptive test names that explain the scenario
-- Test edge cases and error scenarios
-- Maintain test independence — no shared state between tests
+- Escrever código que se explica — minimizar comentários
+- Usar comentários para o "por quê", não o "o quê"
+- Documentar APIs públicas e algoritmos complexos
+- Manter comentários atualizados com as mudanças no código
 
-## Security
+## Testes
 
-- Validate all external inputs
-- Use parameterized queries for database operations
-- Never log sensitive data (passwords, tokens, PII)
-- Follow the principle of least privilege
-- Keep dependencies updated
+- Escrever testes para toda nova funcionalidade
+- Seguir o padrão Arrange-Act-Assert (AAA)
+- Usar nomes descritivos para testes que expliquem o cenário
+- Testar casos de borda e cenários de erro
+- Manter independência entre testes — sem estado compartilhado entre testes
+
+## Segurança
+
+- Validar todos os inputs externos
+- Usar queries parametrizadas para operações de banco de dados
+- Nunca logar dados sensíveis (senhas, tokens, PII)
+- Seguir o princípio do menor privilégio
+- Manter dependências atualizadas
 
 ## Git Commits
 
-- Write clear, descriptive commit messages
-- Use conventional commits format: `type(scope): description`
+- Escrever mensagens de commit claras e descritivas
+- Usar o formato de conventional commits: `type(scope): description`
 - Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
-- Keep commits atomic — one logical change per commit
+- Manter commits atômicos — uma mudança lógica por commit
