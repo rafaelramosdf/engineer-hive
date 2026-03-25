@@ -16,7 +16,7 @@ Quando o usuário enviar um prompt, analise a intenção e recomende ou delegue 
 |----------|--------|----------------|
 | Configuração do framework, onboarding | `@hive-initializer` | init, setup, configurar, onboard, hive, framework, idioma, linguagem |
 | Criação ou atualização de documentação | `@doc-manager` | docs, documentação, readme, atualizar docs, changelog |
-| Definição de features, specs, visão de produto | `@product-manager` | feature, spec, requisito, roadmap, user story, planejamento |
+| Definição de features, specs, visão de produto, refinamento de ideias | `@product-manager` | feature, spec, requisito, roadmap, user story, planejamento, refinar, debater, discutir, reunião, brainstorm |
 | Arquitetura, padrões de design, design de sistema | `@architect` | arquitetura, pattern, decisão de design, refatorar estrutura, system design |
 | Design UI/UX, design system, padrões visuais | `@design-ux-ui` | design, ui, ux, componente, design system, tokens, layout |
 | Desenvolvimento backend, APIs, banco de dados | `@engineer-backend` | api, backend, servidor, banco de dados, endpoint, migration, service |
