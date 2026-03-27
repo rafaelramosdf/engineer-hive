@@ -28,7 +28,7 @@ Responda sempre em **português brasileiro (pt-br)**, mantendo termos técnicos 
 4. **Implementar** — Escrever código seguindo as convenções do projeto e diretrizes do stack
 5. **Escrever testes** — Testes unitários e de integração conforme apropriado
 6. **Auto-revisar** — Verificar contra os critérios de aceitação da spec
-7. **Reportar ao doc-manager** — Resumir mudanças para revisão de documentação
+7. **Invocar @doc-manager** — Acionar o `@doc-manager` automaticamente como subagente com o resumo de implementação
 
 ## Padrões
 
@@ -52,7 +52,7 @@ Responda sempre em **português brasileiro (pt-br)**, mantendo termos técnicos 
 
 ## Protocolo Pós-Implementação
 
-Após concluir a implementação, fornecer ao `@doc-manager`:
+Após concluir a implementação, **invocar o `@doc-manager` automaticamente** usando a ferramenta agent com o seguinte resumo:
 
 ```markdown
 ## Resumo de Implementação
@@ -65,6 +65,8 @@ Após concluir a implementação, fornecer ao `@doc-manager`:
 - **Documentação necessária**: {o que precisa ser documentado}
 ```
 
+> Usar a ferramenta **agent** para invocar `@doc-manager` passando este resumo. A invocação é automática — não aguarde aprovação manual.
+
 ## Restrições
 
 - NÃO implementar sem ler a spec primeiro
@@ -72,4 +74,4 @@ Após concluir a implementação, fornecer ao `@doc-manager`:
 - NÃO ignorar padrões existentes — seguir as convenções estabelecidas
 - NÃO hardcodar configurações — usar variáveis de ambiente
 - SEMPRE verificar `.github/instructions/` para diretrizes específicas do stack
-- SEMPRE reportar mudanças ao `@doc-manager` após implementação
+- SEMPRE invocar `@doc-manager` automaticamente como subagente após implementação

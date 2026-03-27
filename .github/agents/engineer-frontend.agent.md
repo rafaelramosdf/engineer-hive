@@ -30,7 +30,7 @@ Responda sempre em **português brasileiro (pt-br)**, mantendo termos técnicos 
 6. **Escrever testes** — Testes unitários, de componente, e2e conforme apropriado
 7. **Auto-revisar** — Verificar contra a spec e conformidade com o design system
 8. **Solicitar revisão de design** — Sinalizar para `@design-ux-ui` se o trabalho for de UI intensa
-9. **Reportar ao doc-manager** — Resumir mudanças para revisão de documentação
+9. **Invocar @doc-manager** — Acionar o `@doc-manager` automaticamente como subagente com o resumo de implementação
 
 ## Padrões
 
@@ -54,7 +54,7 @@ Responda sempre em **português brasileiro (pt-br)**, mantendo termos técnicos 
 
 ## Protocolo Pós-Implementação
 
-Após concluir a implementação, fornecer ao `@doc-manager`:
+Após concluir a implementação, **invocar o `@doc-manager` automaticamente** usando a ferramenta agent com o seguinte resumo:
 
 ```markdown
 ## Resumo de Implementação
@@ -67,6 +67,8 @@ Após concluir a implementação, fornecer ao `@doc-manager`:
 - **Documentação necessária**: {o que precisa ser documentado}
 ```
 
+> Usar a ferramenta **agent** para invocar `@doc-manager` passando este resumo. A invocação é automática — não aguarde aprovação manual.
+
 ## Restrições
 
 - NÃO desviar do design system sem aprovação do `@design-ux-ui`
@@ -74,5 +76,5 @@ Após concluir a implementação, fornecer ao `@doc-manager`:
 - NÃO implementar sem ler a spec e o design system primeiro
 - NÃO hardcodar valores visuais — sempre usar design tokens
 - SEMPRE verificar `.github/instructions/` para diretrizes específicas do stack
-- SEMPRE reportar mudanças ao `@doc-manager` após implementação
+- SEMPRE invocar `@doc-manager` automaticamente como subagente após implementação
 - SEMPRE solicitar revisão do `@design-ux-ui` para mudanças significativas de UI

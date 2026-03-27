@@ -52,16 +52,25 @@ docs/                           # Documentação legível por humanos
 1. Engenheiro escreve uma spec em `specs/features/`, `specs/tasks/`, `specs/bugfixes/` ou `specs/hotfixes/`
 2. O agente apropriado é invocado com a spec como contexto
 3. O agente implementa seguindo os padrões e convenções do projeto
-4. Após a implementação, `@doc-manager` revisa e atualiza a documentação
+4. O agente invoca automaticamente `@doc-manager` ao concluir *(via subagente aninhado)*
 5. As mudanças são commitadas seguindo as convenções do projeto
+
+> **Subagentes aninhados habilitados**: o setting `chat.subagents.allowInvocationsFromSubagents` está ativo no workspace. Agentes podem invocar outros agentes diretamente sem intervenção humana.
 
 ## Protocolo de Comunicação entre Agentes
 
-Quando um agente de engenharia (backend/frontend) concluir uma implementação:
-- Resumir as mudanças feitas (arquivos criados, modificados, deletados)
-- Listar novas dependências ou configurações adicionadas
-- Sinalizar qual documentação precisa ser criada ou atualizada
-- O agente `@doc-manager` deve ser invocado com esse resumo
+Os agentes do Engineer Hive utilizam **subagentes aninhados** para handoffs automáticos entre domínios. A invocação é feita via ferramenta `agent` ao final de cada etapa:
+
+| Fluxo | Gatilho | Handoff automático |
+|-------|---------|--------------------|
+| Implementação concluída | `@engineer-backend` ou `@engineer-frontend` finaliza | → invoca `@doc-manager` |
+| Bug investigado | `@bug-analyst` salva spec de bugfix | → invoca `@engineer-backend` ou `@engineer-frontend` |
+| Spec arquitetural | `@product-manager` finaliza spec com impacto arquitetural | → invoca `@architect` para validação |
+
+Quando um agente de engenharia (backend/frontend) concluir uma implementação, ele deve invocar `@doc-manager` com:
+- Resumo das mudanças (arquivos criados, modificados, deletados)
+- Novas dependências ou configurações adicionadas
+- Documentação que precisa ser criada ou atualizada
 
 ## Configuração de Stack e Idioma
 

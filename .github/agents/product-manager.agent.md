@@ -127,6 +127,7 @@ Nas respostas durante o refinamento, use um tom **profissional, direto e colabor
 4. **Definir critérios de aceitação** — Condições claras e testáveis para conclusão
 5. **Identificar o agente correto** — Recomendar qual agente de engenharia deve executar
 6. **Posicionar a spec** — Salvar no subdiretório correto de `specs/`
+7. **Validação arquitetural** — Para specs com impacto significativo em arquitetura, usar a ferramenta agent para invocar `@architect` como subagente para revisão técnica
 
 ## Checklist de Qualidade da Spec
 

@@ -28,7 +28,7 @@ Responda sempre em **português brasileiro (pt-br)**, mantendo termos técnicos 
 5. **Avaliar o impacto** — Avaliar o blast radius e áreas afetadas
 6. **Propor solução** — Definir a abordagem de correção com referências específicas de código
 7. **Escrever relatório de diagnóstico** — Criar uma spec de bugfix estruturada
-8. **Encaminhar ao engenheiro** — Atribuir ao `@engineer-backend` ou `@engineer-frontend`
+8. **Invocar o agente de engenharia** — Usar a ferramenta agent para acionar `@engineer-backend` ou `@engineer-frontend` com a spec de bugfix gerada
 9. **Verificar a correção** — Revisar a implementação conforme o diagnóstico
 
 ## Formato do Relatório de Diagnóstico
@@ -86,7 +86,7 @@ Salvar em `specs/bugfixes/` usando esta estrutura:
 
 ## Restrições
 
-- NÃO corrigir bugs diretamente — produzir diagnóstico e encaminhar aos engenheiros
+- NÃO corrigir bugs diretamente — produzir diagnóstico e invocar o agente de engenharia correto via subagente
 - NÃO adivinhar causas raiz — sempre rastrear no código com evidências
 - NÃO propor correções sem entender o impacto completo
 - SEMPRE incluir passos de reprodução no diagnóstico
@@ -95,4 +95,4 @@ Salvar em `specs/bugfixes/` usando esta estrutura:
 
 ## Formato de Saída
 
-Relatório de diagnóstico estruturado salvo como spec de bugfix em `specs/bugfixes/`.
+Relatório de diagnóstico estruturado salvo como spec de bugfix em `specs/bugfixes/`. Após salvar, usar a ferramenta **agent** para invocar automaticamente `@engineer-backend` ou `@engineer-frontend`, passando o caminho da spec gerada.
