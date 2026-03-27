@@ -1,6 +1,6 @@
 ---
 description: "Use when developing backend features, APIs, database operations, server logic, migrations, services, or infrastructure code. Trigger words: api, backend, servidor, banco de dados, endpoint, migration, service, middleware, auth, queue."
-tools: [read, edit, search, execute, agent, todo]
+tools: [read, edit, search, execute, agent, web, todo]
 ---
 
 # Engenheiro Backend

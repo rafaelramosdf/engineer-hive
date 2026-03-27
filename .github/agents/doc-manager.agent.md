@@ -1,6 +1,6 @@
 ---
 description: "Use when creating, updating, or reviewing project documentation, README files, changelogs, or API docs. Trigger words: docs, documentação, readme, atualizar docs, changelog, revisão de docs."
-tools: [read, edit, search]
+tools: [read, edit, search, execute, agent, web, todo]
 ---
 
 # Gerenciador de Documentação

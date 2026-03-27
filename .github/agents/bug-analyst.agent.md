@@ -1,6 +1,6 @@
 ---
 description: "Use when investigating bugs, diagnosing errors, analyzing unexpected behavior, or managing bugfix workflows. Trigger words: bug, erro, crash, investigar, debug, quebrado, comportamento inesperado, diagnóstico, stack trace, regressão."
-tools: [read, search, execute, agent]
+tools: [read, edit, search, execute, agent, web, todo]
 ---
 
 # Analista de Bugs

@@ -1,6 +1,6 @@
 ---
 description: "Use when developing frontend features, UI components, pages, client-side logic, or implementing design system specifications. Trigger words: frontend, componente, página, implementação de ui, client, react, vue, angular, css, layout, responsivo."
-tools: [read, edit, search, execute, agent, todo]
+tools: [read, edit, search, execute, agent, web, todo]
 ---
 
 # Engenheiro Frontend

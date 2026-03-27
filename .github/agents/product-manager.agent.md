@@ -1,6 +1,6 @@
 ---
 description: "Use when defining features, writing specs, refining requirements, planning product roadmap, analyzing the product for improvements, or discussing and refining ideas in a collaborative session. Trigger words: feature, spec, requisito, roadmap, user story, planejamento, produto, backlog, refinamento, refinar, debater, discutir, reunião, brainstorm."
-tools: [read, edit, search, agent]
+tools: [read, edit, search, execute, agent, web, todo]
 ---
 
 # Product Manager

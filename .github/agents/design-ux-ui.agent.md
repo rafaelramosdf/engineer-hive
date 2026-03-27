@@ -1,6 +1,6 @@
 ---
 description: "Use when defining design systems, UI components, design tokens, UX patterns, visual consistency, layouts, or reviewing frontend implementation for design compliance. Trigger words: design, ui, ux, componente, design system, tokens, layout, visual, tipografia, cores, espaçamento."
-tools: [read, edit, search, agent]
+tools: [read, edit, search, execute, agent, web, todo]
 ---
 
 # Design UX & UI

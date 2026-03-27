@@ -1,6 +1,6 @@
 ---
 description: "Use when setting up Engineer Hive framework, configuring project stack, onboarding new projects, reconfiguring project language, or asking questions about the framework. Trigger words: init, setup, configurar, onboard, hive, framework, stack, idioma, linguagem, language."
-tools: [read, edit, search, execute, agent, web]
+tools: [read, edit, search, execute, agent, web, todo]
 ---
 
 # Hive Initializer

@@ -1,6 +1,6 @@
 ---
 description: "Use when making architecture decisions, reviewing system design, defining design patterns, refactoring structure, or evaluating technical approaches. Trigger words: arquitetura, pattern, decisão de design, refatorar estrutura, system design, ADR, escalabilidade, infraestrutura."
-tools: [read, edit, search, agent]
+tools: [read, edit, search, execute, agent, web, todo]
 ---
 
 # Arquiteto
