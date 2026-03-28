@@ -27,6 +27,48 @@ Abra o chat AI do seu editor e execute:
 
 Ou use o atalho de prompt: `/init-project`
 
+## Atualização
+
+Para atualizar o framework em um projeto existente, use o script de atualização. Ele substitui **apenas os arquivos do framework** (agentes, prompts, skills, templates e padrões) e preserva tudo que é específico do seu projeto.
+
+**O que é atualizado:**
+- `.github/agents/` — Definições dos agentes
+- `.github/copilot-instructions.md` — Roteamento e protocolo central
+- `.github/instructions/coding-standards`, `documentation-standards`, `spec-writing` — Padrões genéricos
+- `.github/prompts/` — Templates de prompts
+- `.github/skills/` — Skills do framework
+- `specs/templates/` — Templates de spec
+- `scripts/` — Scripts de instalação e atualização
+
+**O que é preservado:**
+- `.github/instructions/stack.instructions.md` — Configuração de stack do seu projeto
+- `.github/instructions/language.instructions.md` — Configuração de idioma
+- `specs/features|tasks|bugfixes|hotfixes/` — Suas especificações
+- `docs/` — Sua documentação
+- `.vscode/` — Configurações de workspace
+
+```bash
+# Linux / macOS
+curl -fsSL https://raw.githubusercontent.com/rafaelramosdf/engineer-hive/main/scripts/update.sh | bash
+
+# Ou, se já tiver o script localmente:
+chmod +x scripts/update.sh && ./scripts/update.sh
+
+# Preview do que seria atualizado (sem alterar nada):
+./scripts/update.sh --dry-run
+```
+
+```powershell
+# Windows (PowerShell)
+irm https://raw.githubusercontent.com/rafaelramosdf/engineer-hive/main/scripts/update.ps1 | iex
+
+# Ou, se já tiver o script localmente:
+.\scripts\update.ps1
+
+# Preview do que seria atualizado (sem alterar nada):
+.\scripts\update.ps1 -DryRun
+```
+
 ## Como Funciona
 
 ```
@@ -96,6 +138,11 @@ docs/                           # Documentação legível por humanos
 ├── guides/                     # Guias de desenvolvedor
 ├── design-system/              # Docs do design system
 └── changelog/                  # Notas de release
+scripts/
+├── install.sh                  # Script de instalação (Linux/macOS)
+├── install.ps1                 # Script de instalação (Windows)
+├── update.sh                   # Script de atualização (Linux/macOS)
+└── update.ps1                  # Script de atualização (Windows)
 ```
 
 ## Compatibilidade com Editores
