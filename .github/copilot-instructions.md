@@ -46,6 +46,49 @@ docs/                           # Documentação legível por humanos
 3. **Documentação como Código**: Toda mudança de implementação dispara uma revisão de documentação. O agente `@doc-manager` é notificado após mudanças de engenharia.
 4. **Consistência em Primeiro Lugar**: Siga os padrões específicos do projeto definidos em `.github/instructions/`. Em caso de dúvida, verifique o código existente para convenções.
 5. **Delegação Progressiva**: Comece com o agente mais específico. Escale para agentes mais amplos apenas quando a tarefa cruzar fronteiras de domínio.
+6. **Responsabilidade de Escopo**: Todo agente DEVE validar se a tarefa está no seu domínio ANTES de agir. Tarefas fora do escopo são SEMPRE delegadas — nunca executadas pelo agente errado.
+
+## Protocolo Universal de Validação de Escopo
+
+> **Regra inviolável do framework.** Nenhum agente executa tarefas fora do seu domínio, mesmo que possua as ferramentas técnicas para tal.
+
+### Protocolo de Execução Obrigatório
+
+Cada agente DEVE seguir este fluxo a cada solicitação:
+
+```
+1. RECEBER  → Ler a solicitação completa do usuário
+2. VALIDAR  → Determinar se a tarefa está dentro do meu domínio
+3. SE SIM   → Executar normalmente conforme o fluxo do meu agente
+4. SE NÃO   → (a) Informar ao usuário qual agente é responsável
+               (b) Invocar o agente correto via ferramenta `agent` com o contexto completo
+               (c) Não executar nenhuma parte da tarefa
+5. SE MISTO → Delegar cada parte ao agente correspondente, coordenando a sequência
+```
+
+### Tabela de Responsabilidades
+
+| Domínio | Agente Responsável |
+|---------|-------------------|
+| Implementação backend (API, serviços, DB, migrations) | `@engineer-backend` |
+| Implementação frontend (UI, componentes, páginas, client) | `@engineer-frontend` |
+| Escrita, refinamento e gestão de specs | `@product-manager` |
+| Decisões arquiteturais, ADRs, system design | `@architect` |
+| Design system, tokens, padrões visuais, UX | `@design-ux-ui` |
+| Investigação e diagnóstico de bugs | `@bug-analyst` |
+| Criação e atualização de documentação | `@doc-manager` |
+| Setup e configuração do framework Hive | `@hive-initializer` |
+
+### Exemplos de Delegação Obrigatória
+
+| Agente Ativo | Solicitação Recebida | Ação Correta |
+|---|---|---|
+| `@hive-initializer` | "Veja as specs e implemente" | Ler specs → identificar domínios → delegar para `@engineer-backend`/`@engineer-frontend` |
+| `@hive-initializer` | "Próximas features: vamos trabalhar" | Ler specs → classificar → delegar ao(s) agente(s) correto(s) |
+| `@engineer-backend` | "Crie os componentes visuais desta tela" | Delegar para `@engineer-frontend` |
+| `@product-manager` | "Investigue o bug de login" | Delegar para `@bug-analyst` |
+| `@architect` | "Escreva o código do novo service" | Delegar para `@engineer-backend` |
+| `@engineer-frontend` | "Preciso de um ADR para esta decisão" | Delegar para `@architect` |
 
 ## Fluxo de Trabalho — Spec para Implementação
 
