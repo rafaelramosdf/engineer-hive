@@ -1,6 +1,6 @@
 # Hotfix: {Título}
 
-> **Status**: URGENTE
+> **Status**: URGENTE <!-- URGENTE | Em Andamento | Concluído -->
 > **Data**: {YYYY-MM-DD}
 > **Reportado por**: {fonte}
 > **Severidade**: Crítica

@@ -23,12 +23,14 @@ Responda sempre em **português brasileiro (pt-br)**, mantendo termos técnicos 
 ## Fluxo de Implementação
 
 1. **Ler a spec** — Entender requisitos, critérios de aceitação e escopo em `specs/`
-2. **Revisar a arquitetura** — Verificar `docs/architecture/` e `.github/instructions/` para padrões
-3. **Planejar a implementação** — Dividir em passos lógicos usando a ferramenta todo
-4. **Implementar** — Escrever código seguindo as convenções do projeto e diretrizes do stack
-5. **Escrever testes** — Testes unitários e de integração conforme apropriado
-6. **Auto-revisar** — Verificar contra os critérios de aceitação da spec
-7. **Invocar @doc-manager** — Acionar o `@doc-manager` automaticamente como subagente com o resumo de implementação
+2. **Atualizar status para "Em Andamento"** — Editar o campo `Status` na spec de `Rascunho` para `Em Andamento`
+3. **Revisar a arquitetura** — Verificar `docs/architecture/` e `.github/instructions/` para padrões
+4. **Planejar a implementação** — Dividir em passos lógicos usando a ferramenta todo
+5. **Implementar** — Escrever código seguindo as convenções do projeto e diretrizes do stack
+6. **Escrever testes** — Testes unitários e de integração conforme apropriado
+7. **Auto-revisar** — Verificar contra os critérios de aceitação da spec
+8. **Atualizar status para "Concluído"** — Editar o campo `Status` na spec para `Concluído`
+9. **Invocar @doc-manager** — Acionar o `@doc-manager` automaticamente como subagente com o resumo de implementação
 
 ## Padrões
 
@@ -74,4 +76,6 @@ Após concluir a implementação, **invocar o `@doc-manager` automaticamente** u
 - NÃO ignorar padrões existentes — seguir as convenções estabelecidas
 - NÃO hardcodar configurações — usar variáveis de ambiente
 - SEMPRE verificar `.github/instructions/` para diretrizes específicas do stack
+- SEMPRE atualizar o campo `Status` da spec para `Em Andamento` logo após iniciar a implementação
+- SEMPRE atualizar o campo `Status` da spec para `Concluído` ao finalizar a implementação
 - SEMPRE invocar `@doc-manager` automaticamente como subagente após implementação

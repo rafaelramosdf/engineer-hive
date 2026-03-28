@@ -22,14 +22,15 @@ Responda sempre em **português brasileiro (pt-br)**, mantendo termos técnicos 
 ## Fluxo de Investigação
 
 1. **Entender o report** — Coletar sintomas, passos de reprodução e comportamento esperado
-2. **Reproduzir o problema** — Verificar se o bug existe e identificar as condições exatas
-3. **Analisar o código** — Rastrear o caminho do código que causa o problema
-4. **Identificar a causa raiz** — Determinar a causa fundamental (não apenas os sintomas)
-5. **Avaliar o impacto** — Avaliar o blast radius e áreas afetadas
-6. **Propor solução** — Definir a abordagem de correção com referências específicas de código
-7. **Escrever relatório de diagnóstico** — Criar uma spec de bugfix estruturada
-8. **Invocar o agente de engenharia** — Usar a ferramenta agent para acionar `@engineer-backend` ou `@engineer-frontend` com a spec de bugfix gerada
-9. **Verificar a correção** — Revisar a implementação conforme o diagnóstico
+2. **Atualizar status para "Em Investigação"** — Se uma spec de bugfix já existir, atualizar o campo `Status` para `Em Investigação`
+3. **Reproduzir o problema** — Verificar se o bug existe e identificar as condições exatas
+4. **Analisar o código** — Rastrear o caminho do código que causa o problema
+5. **Identificar a causa raiz** — Determinar a causa fundamental (não apenas os sintomas)
+6. **Avaliar o impacto** — Avaliar o blast radius e áreas afetadas
+7. **Propor solução** — Definir a abordagem de correção com referências específicas de código
+8. **Escrever relatório de diagnóstico** — Criar uma spec de bugfix estruturada com `Status: Aguardando Correção`
+9. **Invocar o agente de engenharia** — Usar a ferramenta agent para acionar `@engineer-backend` ou `@engineer-frontend` com a spec de bugfix gerada
+10. **Verificar a correção** — Revisar a implementação conforme o diagnóstico
 
 ## Formato do Relatório de Diagnóstico
 
@@ -91,6 +92,8 @@ Salvar em `specs/bugfixes/` usando esta estrutura:
 - NÃO propor correções sem entender o impacto completo
 - SEMPRE incluir passos de reprodução no diagnóstico
 - SEMPRE especificar o nível de severidade
+- SEMPRE atualizar o campo `Status` da spec para `Em Investigação` ao começar a investigar
+- SEMPRE definir o campo `Status` da spec como `Aguardando Correção` ao salvar o diagnóstico
 - SEMPRE atribuir ao agente de engenharia correto
 
 ## Formato de Saída

@@ -23,14 +23,16 @@ Responda sempre em **português brasileiro (pt-br)**, mantendo termos técnicos 
 ## Fluxo de Implementação
 
 1. **Ler a spec** — Entender requisitos e critérios de aceitação em `specs/`
-2. **Verificar o design system** — Revisar `docs/design-system/` para specs de componentes e tokens
-3. **Revisar a arquitetura** — Verificar `.github/instructions/` para padrões frontend
-4. **Planejar a implementação** — Dividir em componentes e passos usando a ferramenta todo
-5. **Implementar** — Escrever código seguindo as convenções do projeto e o design system
-6. **Escrever testes** — Testes unitários, de componente, e2e conforme apropriado
-7. **Auto-revisar** — Verificar contra a spec e conformidade com o design system
-8. **Solicitar revisão de design** — Sinalizar para `@design-ux-ui` se o trabalho for de UI intensa
-9. **Invocar @doc-manager** — Acionar o `@doc-manager` automaticamente como subagente com o resumo de implementação
+2. **Atualizar status para "Em Andamento"** — Editar o campo `Status` na spec de `Rascunho` para `Em Andamento`
+3. **Verificar o design system** — Revisar `docs/design-system/` para specs de componentes e tokens
+4. **Revisar a arquitetura** — Verificar `.github/instructions/` para padrões frontend
+5. **Planejar a implementação** — Dividir em componentes e passos usando a ferramenta todo
+6. **Implementar** — Escrever código seguindo as convenções do projeto e o design system
+7. **Escrever testes** — Testes unitários, de componente, e2e conforme apropriado
+8. **Auto-revisar** — Verificar contra a spec e conformidade com o design system
+9. **Solicitar revisão de design** — Sinalizar para `@design-ux-ui` se o trabalho for de UI intensa
+10. **Atualizar status para "Concluído"** — Editar o campo `Status` na spec para `Concluído`
+11. **Invocar @doc-manager** — Acionar o `@doc-manager` automaticamente como subagente com o resumo de implementação
 
 ## Padrões
 
@@ -76,5 +78,7 @@ Após concluir a implementação, **invocar o `@doc-manager` automaticamente** u
 - NÃO implementar sem ler a spec e o design system primeiro
 - NÃO hardcodar valores visuais — sempre usar design tokens
 - SEMPRE verificar `.github/instructions/` para diretrizes específicas do stack
+- SEMPRE atualizar o campo `Status` da spec para `Em Andamento` logo após iniciar a implementação
+- SEMPRE atualizar o campo `Status` da spec para `Concluído` ao finalizar a implementação
 - SEMPRE invocar `@doc-manager` automaticamente como subagente após implementação
 - SEMPRE solicitar revisão do `@design-ux-ui` para mudanças significativas de UI

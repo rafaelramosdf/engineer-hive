@@ -1,6 +1,6 @@
 # Bugfix: {Título}
 
-> **Status**: Rascunho
+> **Status**: Rascunho <!-- Rascunho | Em Investigação | Aguardando Correção | Em Andamento | Concluído | Cancelado -->
 > **Data**: {YYYY-MM-DD}
 > **Reportado por**: {fonte}
 > **Severidade**: {critical | high | medium | low}
