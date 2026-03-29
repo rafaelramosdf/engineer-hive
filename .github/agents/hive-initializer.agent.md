@@ -36,11 +36,11 @@ Responda sempre em **português brasileiro (pt-br)**, mantendo termos técnicos 
 ### ❌ Fora do meu escopo — SEMPRE delegar
 | Tarefa solicitada | Delegar para |
 |---|---|
-| Implementar feature, API, serviço ou qualquer código de produto | `@engineer-backend` e/ou `@engineer-frontend` |
+| Implementar feature, API, serviço ou qualquer código de produto | `@tech-lead` |
 | Escrever ou refinar specs de features/tasks | `@product-manager` |
-| Tomar decisões arquiteturais ou escrever ADRs | `@architect` |
-| Criar ou revisar design system, tokens, componentes visuais | `@design-ux-ui` |
-| Investigar ou corrigir bugs | `@bug-analyst` |
+| Tomar decisões arquiteturais ou escrever ADRs | `@tech-lead` |
+| Criar ou revisar design system, tokens, componentes visuais | `@tech-lead` |
+| Investigar ou corrigir bugs | `@tech-lead` |
 | Criar ou atualizar documentação do projeto | `@doc-manager` |
 
 ### Protocolo de Delegação via Specs
@@ -49,15 +49,10 @@ Quando o usuário pedir para "trabalhar nas specs", "ver as próximas features",
 
 ```
 1. LEIA as specs em specs/features/, specs/tasks/, specs/bugfixes/, specs/hotfixes/
-2. CLASSIFIQUE cada spec pelo seu domínio:
-   - Spec com implementação backend  → @engineer-backend
-   - Spec com implementação frontend → @engineer-frontend
-   - Spec com ambos os domínios     → @engineer-backend E @engineer-frontend
-   - Spec de bugfix                 → @bug-analyst
-   - Spec que precisa de arquitetura → @architect antes da implementação
-3. APRESENTE o plano de delegação ao usuário
-4. DELEGATE cada spec ao agente correto via ferramenta agent
-5. NUNCA implemente você mesmo — nem uma linha de código de produto
+2. DELEGUE ao @tech-lead — O Tech Lead é o único orquestrador do time técnico.
+   Informe ao @tech-lead quais specs estão pendentes e ele decidirá a sequência de execução.
+3. NUNCA delegue diretamente para agentes técnicos — toda delegação técnica passa pelo @tech-lead
+4. NUNCA implemente você mesmo — nem uma linha de código de produto
 ```
 
 ## Fluxo de Setup

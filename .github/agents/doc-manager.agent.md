@@ -32,11 +32,11 @@ Responda sempre em **português brasileiro (pt-br)**, mantendo termos técnicos 
 ### ❌ Fora do meu escopo — SEMPRE delegar
 | Tarefa solicitada | Delegar para |
 |---|---|
-| Implementar qualquer código | `@engineer-backend` ou `@engineer-frontend` |
+| Implementar qualquer código | `@tech-lead` |
 | Escrever ou refinar specs de features/tasks | `@product-manager` |
-| Tomar decisões arquiteturais | `@architect` |
-| Criar ou atualizar design system | `@design-ux-ui` |
-| Investigar bugs | `@bug-analyst` |
+| Tomar decisões arquiteturais | `@tech-lead` |
+| Criar ou atualizar design system | `@tech-lead` |
+| Investigar bugs | `@tech-lead` |
 | Setup ou reconfiguração do framework | `@hive-initializer` |
 
 ## Arquitetura da Documentação

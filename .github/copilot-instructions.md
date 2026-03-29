@@ -17,13 +17,18 @@ Quando o usuário enviar um prompt, analise a intenção e recomende ou delegue 
 | Configuração do framework, onboarding | `@hive-initializer` | init, setup, configurar, onboard, hive, framework, idioma, linguagem |
 | Criação ou atualização de documentação | `@doc-manager` | docs, documentação, readme, atualizar docs, changelog |
 | Definição de features, specs, visão de produto, refinamento de ideias | `@product-manager` | feature, spec, requisito, roadmap, user story, planejamento, refinar, debater, discutir, reunião, brainstorm |
+| Liderança técnica, orquestração, dúvida técnica, implementar spec, code review | `@tech-lead` | tech lead, implementar, executar, dúvida técnica, qual agente, problema técnico, code review, delegar, orquestrar, próximos passos |
 | Arquitetura, padrões de design, design de sistema | `@architect` | arquitetura, pattern, decisão de design, refatorar estrutura, system design |
 | Design UI/UX, design system, padrões visuais | `@design-ux-ui` | design, ui, ux, componente, design system, tokens, layout |
 | Desenvolvimento backend, APIs, banco de dados | `@engineer-backend` | api, backend, servidor, banco de dados, endpoint, migration, service |
 | Desenvolvimento frontend, interface | `@engineer-frontend` | frontend, componente, página, implementação de ui, client |
 | Investigação de bugs, diagnóstico | `@bug-analyst` | bug, erro, crash, investigar, debug, quebrado, comportamento inesperado |
 
-Quando a intenção abranger múltiplos domínios, sugira o agente primário e mencione quais agentes secundários podem ser necessários.
+### Regra de Roteamento Padrão
+
+> Quando a intenção do usuário envolver **qualquer trabalho técnico** (implementação, bug, dúvida técnica, code review) e o usuário não souber qual agente acionar, **sempre encaminhe para o `@tech-lead`**. O Tech Lead é o ponto de entrada padrão para todo trabalho técnico.
+
+Quando a intenção abranger múltiplos domínios técnicos, encaminhe para o `@tech-lead` que coordenará os agentes necessários.
 
 ## Estrutura do Projeto
 
@@ -70,6 +75,7 @@ Cada agente DEVE seguir este fluxo a cada solicitação:
 
 | Domínio | Agente Responsável |
 |---------|-------------------|
+| Liderança técnica, orquestração do time, code review, delegação | `@tech-lead` |
 | Implementação backend (API, serviços, DB, migrations) | `@engineer-backend` |
 | Implementação frontend (UI, componentes, páginas, client) | `@engineer-frontend` |
 | Escrita, refinamento e gestão de specs | `@product-manager` |
@@ -83,37 +89,68 @@ Cada agente DEVE seguir este fluxo a cada solicitação:
 
 | Agente Ativo | Solicitação Recebida | Ação Correta |
 |---|---|---|
-| `@hive-initializer` | "Veja as specs e implemente" | Ler specs → identificar domínios → delegar para `@engineer-backend`/`@engineer-frontend` |
-| `@hive-initializer` | "Próximas features: vamos trabalhar" | Ler specs → classificar → delegar ao(s) agente(s) correto(s) |
-| `@engineer-backend` | "Crie os componentes visuais desta tela" | Delegar para `@engineer-frontend` |
-| `@product-manager` | "Investigue o bug de login" | Delegar para `@bug-analyst` |
-| `@architect` | "Escreva o código do novo service" | Delegar para `@engineer-backend` |
-| `@engineer-frontend` | "Preciso de um ADR para esta decisão" | Delegar para `@architect` |
+| `@hive-initializer` | "Veja as specs e implemente" | Ler specs → delegar para `@tech-lead` para orquestrar a implementação |
+| `@hive-initializer` | "Próximas features: vamos trabalhar" | Ler specs → delegar para `@tech-lead` |
+| `@product-manager` | "Spec aprovada, pode implementar" | Delegar para `@tech-lead` que orquestrará a execução |
+| `@product-manager` | "Investigue o bug de login" | Delegar para `@tech-lead` que acionará `@bug-analyst` |
+| `@engineer-backend` | "Crie os componentes visuais desta tela" | Reportar ao `@tech-lead` que delegará para `@engineer-frontend` |
+| `@engineer-frontend` | "Preciso de um ADR para esta decisão" | Reportar ao `@tech-lead` que delegará para `@architect` |
+| `@tech-lead` | "Quero definir a UI do projeto" | Delegar para `@design-ux-ui` |
 
 ## Fluxo de Trabalho — Spec para Implementação
 
-1. Engenheiro escreve uma spec em `specs/features/`, `specs/tasks/`, `specs/bugfixes/` ou `specs/hotfixes/`
-2. O agente apropriado é invocado com a spec como contexto
-3. O agente implementa seguindo os padrões e convenções do projeto
-4. O agente invoca automaticamente `@doc-manager` ao concluir *(via subagente aninhado)*
-5. As mudanças são commitadas seguindo as convenções do projeto
+1. `@product-manager` escreve/refina a spec e entrega ao `@tech-lead`
+2. `@tech-lead` analisa a spec, identifica domínios e planeja a sequência de execução
+3. `@tech-lead` delega para `@architect` (se houver impacto arquitetural)
+4. `@architect` retorna decisões ao `@tech-lead`, que revisa e aprova
+5. `@tech-lead` delega para `@design-ux-ui` (se houver frontend)
+6. `@design-ux-ui` retorna design system ao `@tech-lead`, que revisa e aprova
+7. `@tech-lead` delega para `@engineer-backend` (implementação server-side)
+8. `@engineer-backend` retorna implementação ao `@tech-lead`, que revisa (code review) e aprova
+9. `@tech-lead` delega para `@engineer-frontend` (implementação client-side)
+10. `@engineer-frontend` retorna implementação ao `@tech-lead`, que revisa (code review) e aprova
+11. `@tech-lead` invoca `@doc-manager` com o resumo consolidado de todas as implementações
+
+### Ordem Obrigatória para Projetos com Frontend
+
+```
+@product-manager → @tech-lead → @architect → @tech-lead → @design-ux-ui → @tech-lead → @engineer-backend → @tech-lead → @engineer-frontend → @tech-lead → @doc-manager
+```
+
+### Ordem para Projetos Somente Backend
+
+```
+@product-manager → @tech-lead → @architect → @tech-lead → @engineer-backend → @tech-lead → @doc-manager
+```
+
+> **Regra inviolável**: O `@tech-lead` é o único orquestrador do time técnico. Nenhum agente técnico invoca outro agente técnico diretamente — toda comunicação passa pelo Tech Lead. O `@product-manager` entrega specs exclusivamente ao `@tech-lead`, não podendo acionar agentes técnicos diretamente.
+
+> **Regra inviolável**: Nenhum desenvolvimento frontend pode ser iniciado se o design system não foi criado. O `@tech-lead` DEVE verificar a existência de `docs/design-system/` antes de delegar qualquer tarefa ao `@engineer-frontend`.
 
 > **Subagentes aninhados habilitados**: o setting `chat.subagents.allowInvocationsFromSubagents` está ativo no workspace. Agentes podem invocar outros agentes diretamente sem intervenção humana.
 
 ## Protocolo de Comunicação entre Agentes
 
-Os agentes do Engineer Hive utilizam **subagentes aninhados** para handoffs automáticos entre domínios. A invocação é feita via ferramenta `agent` ao final de cada etapa:
+Os agentes do Engineer Hive utilizam o modelo **hub-and-spoke** com o `@tech-lead` como hub central para todo o trabalho técnico. A comunicação entre agentes técnicos **sempre passa pelo Tech Lead**.
 
-| Fluxo | Gatilho | Handoff automático |
-|-------|---------|--------------------|
-| Implementação concluída | `@engineer-backend` ou `@engineer-frontend` finaliza | → invoca `@doc-manager` |
-| Bug investigado | `@bug-analyst` salva spec de bugfix | → invoca `@engineer-backend` ou `@engineer-frontend` |
-| Spec arquitetural | `@product-manager` finaliza spec com impacto arquitetural | → invoca `@architect` para validação |
+### Handoffs Automáticos
 
-Quando um agente de engenharia (backend/frontend) concluir uma implementação, ele deve invocar `@doc-manager` com:
-- Resumo das mudanças (arquivos criados, modificados, deletados)
-- Novas dependências ou configurações adicionadas
-- Documentação que precisa ser criada ou atualizada
+| Fluxo | Gatilho | Handoff |
+|-------|---------|---------|
+| Spec pronta | `@product-manager` finaliza spec | → entrega ao `@tech-lead` |
+| Arquitetura concluída | `@architect` finaliza decisões | → retorna ao `@tech-lead` para revisão |
+| Design system criado | `@design-ux-ui` finaliza design system | → retorna ao `@tech-lead` para revisão |
+| Backend implementado | `@engineer-backend` finaliza código | → retorna ao `@tech-lead` para code review |
+| Frontend implementado | `@engineer-frontend` finaliza código | → retorna ao `@tech-lead` para code review |
+| Bug diagnosticado | `@bug-analyst` finaliza diagnóstico | → retorna ao `@tech-lead` para delegação da correção |
+| Tudo implementado e revisado | `@tech-lead` aprova todas as entregas | → invoca `@doc-manager` com resumo consolidado |
+
+### Regras de Comunicação
+
+- **PM → Tech Lead**: O `@product-manager` entrega specs **exclusivamente** ao `@tech-lead`. Não pode acionar agentes técnicos diretamente.
+- **Tech Lead → Agentes Técnicos**: Somente o `@tech-lead` delega tarefas para `@architect`, `@design-ux-ui`, `@engineer-backend`, `@engineer-frontend` e `@bug-analyst`.
+- **Agentes Técnicos → Tech Lead**: Todos os agentes técnicos reportam suas entregas de volta ao `@tech-lead` para revisão/code review.
+- **Tech Lead → Doc Manager**: Após concluir e aprovar todas as implementações, o `@tech-lead` invoca o `@doc-manager` com o resumo consolidado.
 
 ## Configuração de Stack e Idioma
 
